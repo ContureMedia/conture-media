@@ -4,7 +4,7 @@ import { IoIosMail } from "react-icons/io";
 
 const SocialLinks = () => {
   return (
-    <div className="fixed right-0 top-1/2 transform -translate-y-1/2 space-y-3 bg-gray-800 p-2 rounded-l-xl z-50 overflow-hidden">
+    <div className="fixed right-0 top-1/2 transform -translate-y-1/2 space-y-3 bg-gray-800 p-2 rounded-l-xl z-[100] overflow-hidden">
       <a
         href="https://wa.me/+916378467482?text=I'm%20interested%20"
         target="_blank"

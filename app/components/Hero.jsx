@@ -4,32 +4,32 @@ import Button from "./Button";
 
 const Hero = () => {
   return (
-    <div className="h-auto md:h-screen w-full bg-black relative flex flex-col lg:flex-row items-center justify-center antialiased p-5">
-      <div className="mx-auto p-4 mt-5 md:mt-0 flex-1">
-        <h1 className="relative z-10   uppercase bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text font-sans font-bold text-2xl md:text-3xl text-center">
+    <div className="h-auto  w-full bg-black relative flex flex-col lg:flex-row items-center justify-center antialiased p-5">
+      <div className="mx-auto p-4 mt-5 md:mt-0 flex-1 flex flex-col  items-center justify-center">
+        <h1 className="relative z-10   uppercase bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text font-sans font-bold text-2xl lg:text-3xl text-center">
           Dominate the short form content agency with conture media
         </h1>
-        <p className="text-gray-300 capitalize mx-auto my-4 text-xs md:text-base text-center relative z-10 leading-relaxed tracking-normal">
+        <p className="text-gray-300 capitalize mx-auto md:my-4 my-2 text-xs md:text-base text-center relative z-10 leading-relaxed tracking-normal">
           we help elevate your brands digital footprint with snippets expertly
           short form video content.
           <br />
           our cutting edge techniques and content strategy ensure your message
           resonates with the global audience delivering measurable results.
         </p>
-        <p className="text-gray-300 capitalize mx-auto my-4 text-xs md:text-base text-center relative z-10 leading-relaxed tracking-normal">
+        <p className="text-gray-300 capitalize mx-auto md:my-4 my-2 text-xs md:text-base text-center relative z-10 leading-relaxed tracking-normal">
           boost your online presence and engagement rates with compelling
           visuals designed for the fast paced, scroll stopping era of social
           media
         </p>
 
-        <Button text={"Discover The Conture Difference "} />
-        <p className="text-gray-300 capitalize mx-auto my-7 text-xs  text-center relative z-10 leading-relaxed tracking-normal">
+        <Button text={"Discover The Conture Difference"} />
+        <p className="text-gray-300 capitalize mx-auto my-4 md:my-7 text-xs  text-center relative z-10 leading-relaxed tracking-normal">
           secure your spot at the forefront of digital story book your
           complimentary strategy session book
         </p>
       </div>
 
-      <div className="flex-1 flex items-center justify-center p-10 ">
+      <div className=" flex items-center justify-center p-5 md:p-10 ">
         <Image
           src={"/img.gif"}
           alt="music"

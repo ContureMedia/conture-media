@@ -18,7 +18,7 @@ const Contactform = () => {
   if (showSuccess) {
     return (
       <div className="w-full mx-auto flex items-center justify-center p-2">
-        <div className="bg-pink-100 border border-pink-400 text-pink-700 px-4 py-3 rounded relative">
+        <div className="bg-pink-100 border border-pink-400 text-pink-700 px-4 py-3 rounded ">
           <strong className="font-bold">Success!</strong>
           <span className="block sm:inline">
             Your message has been sent successfully.
@@ -31,7 +31,7 @@ const Contactform = () => {
     <section>
       <div
         id="map"
-        className="relative h-[350px] overflow-hidden bg-cover bg-[50%] bg-no-repeat"
+        className=" h-[350px] overflow-hidden bg-cover bg-[50%] bg-no-repeat"
       >
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60924485.415671155!2d54.55272035376464!3d21.250260899922907!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3663f18a24cbe857%3A0xa9416bfcd3a0f459!2sAsia!5e0!3m2!1sen!2sin!4v1710246311482!5m2!1sen!2sin"
@@ -40,14 +40,15 @@ const Contactform = () => {
           style={{ border: 0 }}
           allowFullScreen=""
           loading="lazy"
+          className="rounded-md w-full h-full shadow-md"
         />
       </div>
       <div className="container px-6 md:px-10">
-        <div className="block rounded-lg bg-gray-950  px-6 py-12 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]  md:py-16 md:px-12 -mt-[100px] backdrop-blur-[30px]  border-gray-300 dark:border-gray-800 border">
+        <div className="block rounded-lg bg-gray-950  px-6 py-12 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]  md:py-16 md:px-12 -mt-[90px] backdrop-blur-[30px]  border-gray-500  border">
           <div className="flex flex-wrap">
             <div className="mb-12 w-full shrink-0 grow-0 basis-auto md:px-3 lg:mb-0 lg:w-5/12 lg:px-6">
               <form onSubmit={handleSubmit}>
-                <div className="relative mb-6" data-te-input-wrapper-init="">
+                <div className=" mb-6">
                   <label
                     className="pointer-events-none   mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-gray-300 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none "
                     htmlFor="exampleInput90"
@@ -69,7 +70,7 @@ const Contactform = () => {
                     errors={state.errors}
                   />
                 </div>
-                <div className="relative mb-6" data-te-input-wrapper-init="">
+                <div className=" mb-6">
                   <label
                     className="pointer-events-none   mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-gray-300 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none "
                     htmlFor="exampleInput91"
@@ -91,7 +92,7 @@ const Contactform = () => {
                     errors={state.errors}
                   />
                 </div>
-                <div className="relative mb-6" data-te-input-wrapper-init="">
+                <div className=" mb-6">
                   <label
                     htmlFor="exampleFormControlTextarea1"
                     className="pointer-events-none   mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-gray-300 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none "
@@ -99,9 +100,9 @@ const Contactform = () => {
                     Message
                   </label>
                   <textarea
-                    className="peer block min-h-[auto] w-full rounded border bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none "
+                    className="peer block min-h-[auto] w-full rounded border bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none resize-none"
                     id="exampleFormControlTextarea1"
-                    rows={3}
+                    rows={4}
                     name="message"
                     placeholder="Message"
                     required
@@ -116,7 +117,7 @@ const Contactform = () => {
 
                 <button
                   type="submit"
-                  className="w-full bg-pink-500 dark:bg-pink-600 text-white  py-3 rounded-md hover:bg-pink-500 transition-all duration-200 ease-linear focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-neutral-100 focus:ring-opacity-50"
+                  className="w-full bg-pink-600  text-white  py-3 rounded-md hover:bg-pink-500 transition-all duration-200 ease-linear focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-neutral-100 focus:ring-opacity-50"
                 >
                   Send Message
                 </button>
@@ -178,7 +179,7 @@ const Contactform = () => {
                     </div>
                     <div className="ml-6 grow text-gray-300">
                       <p className="mb-2 font-bold text-base ">Location</p>
-                      <p className="text-xs text-gray-300">
+                      <p className="text-sm">
                         Global Service Provider Available to Everyone in the
                         world.
                       </p>
