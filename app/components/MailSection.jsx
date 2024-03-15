@@ -4,7 +4,7 @@ import Button from "./Button";
 import { useEffect, useState } from "react";
 
 const MailSection = () => {
-  const [state, handleSubmit] = useForm("mayrjgkz");
+  const [state, handleSubmit] = useForm("mgeglwwv");
   const [showSuccess, setShowSuccess] = useState(false);
   useEffect(() => {
     if (state.succeeded) {
