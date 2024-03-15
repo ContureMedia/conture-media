@@ -10,7 +10,7 @@ const FaqCard = ({ numQuestions }) => {
     {
       trigger: "Do I need to provide my own filmed content?",
       content:
-        "Yes, you’ll need to film the content. However, we&apos;ll guide you on shooting techniques tailored to your specific requirements.",
+        "Yes, you’ll need to film the content. However, we'll guide you on shooting techniques tailored to your specific requirements.",
     },
     {
       trigger: "What's the editing turnaround for a single short-form video?",

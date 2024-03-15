@@ -46,7 +46,7 @@ const Navbar = () => {
           <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
             <div className="lg:block hidden">
               <a
-                href="https://wa.me/+917425081690"
+                href="https://wa.me/+916378467482?text=I'm%20interested%20"
                 target="_blank"
                 rel="noopener noreferrer"
               >

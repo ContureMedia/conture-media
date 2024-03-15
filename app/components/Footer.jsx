@@ -92,7 +92,7 @@ export default function Footer() {
             <FaLinkedin size={18} />
           </a>
           <a
-            href="https://wa.me/+917425081690"
+            href="https://wa.me/+916378467482?text=I'm%20interested%20"
             target="_blank"
             rel="noopener noreferrer"
             className="block  text-white p-1 transition-colors duration-300 ease-in-out"
