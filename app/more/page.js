@@ -1,5 +1,9 @@
 import React from "react";
 
+export const metadata = {
+  title: "More services coming soon",
+  description: "More content coming soon",
+};
 const More = () => {
   return (
     <div className="relative min-h-screen flex items-center justify-center bg-gray-950 overflow-hidden">
