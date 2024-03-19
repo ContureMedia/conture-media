@@ -120,6 +120,10 @@ const PriceCard = () => {
             </button>
           </a>
         </div>
+        <p className="text-center text-gray-400 text-sm md:text-base">
+          We also offer tailored monthly retainer packages, ensuring dedicated
+          support to our comprehensive solutions
+        </p>
       </div>
     </section>
   );
