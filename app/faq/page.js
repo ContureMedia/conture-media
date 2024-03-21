@@ -2,8 +2,10 @@ import React from "react";
 import FaqCard from "../components/Faq";
 
 export const metadata = {
-  title: "Frequently Asked Questions",
-  description: "Here are some of the most frequently asked questions.",
+  title:
+    "Frequently Asked Questions - Powerful Viral Marketing Secrets Revealed by Conture Media: A Professional Approach",
+  description:
+    "Unlock the secrets of viral digital media campaigns with Conture Media's expert guidance. Transform your content strategy for guaranteed success.",
 };
 const Faq = () => {
   return (

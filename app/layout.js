@@ -6,14 +6,21 @@ import SocialLinks from "./components/SocialLinks";
 
 const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
-  title: "Home Page",
-  description: "This is the home page of my site",
+  title:
+    "Home - Surging Jubilant Discovery: Conture Media Unleashes Remarkable Short Form Content Marketing",
+  description:
+    "Embrace the energy of short form content marketing with Conture Media's professional team. Our unique approach guarantees remarkable results.",
+  icons: {
+    icon: ["/favicon.ico?v=4"],
+    apple: ["/apple-touch-icon.png?v=4"],
+    shortcut: ["/apple-touch-icon.png"],
+  },
+  manifest: "/site.webmanifest",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <link rel="icon" href="logo.svg" sizes="any" />
       <body className={inter.className}>
         <Navbar />
         <SocialLinks />

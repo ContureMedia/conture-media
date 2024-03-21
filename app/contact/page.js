@@ -2,8 +2,10 @@ import React from "react";
 import ContactForm from "./Contact";
 
 export const metadata = {
-  title: "Contact Us",
-  description: "Get in touch with us.",
+  title:
+    "Contact Us - Unveiling Daring Truth: Conture Media's Confidential Approach to Short Form Content Creation",
+  description:
+    "Discover the confidential strategies behind Conture Media's success in video editing, scriptwriting, and more. Unleash your brand's true potential today.",
 };
 
 const Contact = () => {

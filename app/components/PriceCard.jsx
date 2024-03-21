@@ -51,7 +51,7 @@ const PriceCard = () => {
             </h2>
             <p className="flex  items-center justify-start text-sm gap-2">
               <IoMdArrowDropright fontSize={19} className="text-green-500" />{" "}
-              8-week campaign, 3 custom videos/week
+              10-week campaign, 3 custom videos/week
             </p>
             <p className="flex  items-center justify-start text-sm gap-2">
               <IoMdArrowDropright fontSize={19} className="text-green-500" />{" "}
@@ -78,7 +78,7 @@ const PriceCard = () => {
 
           <div className="hover:scale-105 transition-all duration-300 text-white  rounded-lg shadow-lg border-2 border-sky-800 flex flex-col gap-10 p-5">
             <h2 className="text-xl font-semibold text-center">
-              8-Week Social Explosion
+              Aspiring Brand Explosion
             </h2>
             <p className="flex  items-center justify-start text-sm gap-2">
               <IoMdArrowDropright fontSize={19} className="text-green-500" />{" "}
