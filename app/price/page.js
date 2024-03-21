@@ -2,8 +2,10 @@ import PriceCard from "../components/PriceCard";
 import TestimonalCards from "../components/TestimonalCards";
 
 export const metadata = {
-  title: "Pricing",
-  description: "Our best pricing plans.",
+  title:
+    "Pricing - Exclusive Offer: Harness the Power of Short Form Content with Conture Media's Expert Solutions",
+  description:
+    "Our best pricing plans - Don't miss out on the exclusive offer from Conture Media! Elevate your branding with our proven solutions and reach new heights in the digital world.",
 };
 const Price = () => {
   return (
