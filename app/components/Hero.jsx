@@ -10,22 +10,22 @@ const Hero = () => {
           Dominate the short form content agency with conture media
         </h1>
         <p className="text-gray-300 capitalize mx-auto md:my-4 my-2 text-xs md:text-base text-center relative z-10 leading-relaxed tracking-normal">
-          we help elevate your brands digital footprint with snippets expertly
-          short form video content.
+          Elevate your brand&apos;s digital footprint with expert short-form
+          content creation by Conture Media.
           <br />
-          our cutting edge techniques and content strategy ensure your message
-          resonates with the global audience delivering measurable results.
+          Our innovative content strategies ensure your message connects with a
+          global audience, delivering measurable results.
         </p>
         <p className="text-gray-300 capitalize mx-auto md:my-4 my-2 text-xs md:text-base text-center relative z-10 leading-relaxed tracking-normal">
-          boost your online presence and engagement rates with compelling
-          visuals designed for the fast paced, scroll stopping era of social
-          media
+          Boost your online presence and skyrocket engagement rates with
+          compelling content and visuals, tailored for the fast-paced,
+          attention-grabbing landscape of social media.
         </p>
 
         <Button text={"Discover The Conture Difference"} />
         <p className="text-gray-300 capitalize mx-auto my-4 md:my-7 text-xs  text-center relative z-10 leading-relaxed tracking-normal">
-          secure your spot at the forefront of digital story book your
-          complimentary strategy session book
+          Embrace the power of strategic content with Conture Media and stand
+          out in the digital storytelling revolution.
         </p>
       </div>
 
