@@ -8,30 +8,46 @@ import {
 const FaqCard = ({ numQuestions }) => {
   const questions = [
     {
-      trigger: "Do I need to provide my own filmed content?",
+      trigger: "How can I contact Conture Media for services or inquiries?",
       content:
-        "Yes, you’ll need to film the content. However, we'll guide you on shooting techniques tailored to your specific requirements.",
+        "Conture Media is accessible globally and encourages potential clients or anyone with questions to reach out through their contact form, email, or phone. They aim to provide services to a worldwide clientele​​.",
     },
     {
-      trigger: "What's the editing turnaround for a single short-form video?",
+      trigger: "What pricing and packages does Conture Media offer?",
       content:
-        "We typically edit and deliver a single video within 1-2 days. For bulk orders exceeding 20 videos, we guarantee a maximum 2-week delivery.",
+        "Conture Media offers a range of pricing plans and packages, including expert content marketing strategies, creative amplification, and rapid brand growth programs. They also provide custom budget options for unique visions, focusing on brand and creator marketing vision and innovation​​.",
     },
     {
-      trigger: "How is the pricing structured for video editing?",
+      trigger: "How can I start working with Conture Media?",
       content:
-        "Our prices begin at $49, but the final cost depends on the complexity and specifics of your project. We will provide a detailed quote after understanding your exact needs.",
+        "To initiate a partnership with Conture Media, interested parties should contact them through their website or email for a consultation. This process involves discussing brand goals and devising a strategy that aligns with the client's objectives and budget​​.",
     },
     {
-      trigger: "Are thumbnails included in the video editing package?",
+      trigger: "Who are the typical clients of Conture Media?",
       content:
-        "Thumbnails are not included in the base price, but we can design them for you based on a custom quote.",
+        "Conture Media's client base is diverse, catering to individual creators seeking increased visibility as well as established brands looking to enhance their digital presence. They provide tailored services to fit the needs of clients across various sizes and industries​​.",
     },
     {
       trigger:
-        "Do you provide scriptwriting services for videos aimed at going viral?",
+        "Can Conture Media handle all aspects of social media management?",
       content:
-        "Yes, our team specializes in creating scripts that are designed to maximize the viral potential of your content.",
+        "Yes, Conture Media offers a full suite of social media management services, including content creation, posting, engagement tracking, and analytics. They align their efforts with the client's brand voice and goals to ensure cohesive online presence​​.",
+    },
+    {
+      trigger:
+        "What makes Conture Media different from other content marketing agencies?",
+      content:
+        "Conture Media sets itself apart through its niche focus on short-form content and deep understanding of viral trends. They stay ahead of digital trends to ensure their content remains fresh, relevant, and impactful​​.",
+    },
+    {
+      trigger: "How does Conture Media help brands grow on social media?",
+      content:
+        "By producing compelling short-form content tailored to the target audience, Conture Media enhances brand engagement and visibility. They utilize customized strategies for each social media platform, optimizing for the algorithms to maximize reach and impact​​.",
+    },
+    {
+      trigger: "What services does Conture Media offer?",
+      content:
+        "Conture Media specializes in a comprehensive range of services designed to boost online presence and audience engagement for brands and creators on social media. Their offerings include short-form video content, video editing, scriptwriting, social media management, personal branding, viral content strategy, and media production​​.",
     },
     {
       trigger: "Can I get a custom package tailored to my content needs?",
