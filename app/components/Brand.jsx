@@ -1,20 +1,6 @@
 import { Moving } from "@/components/ui/moving-Brand-Client";
 import React from "react";
 
-const BrandConture = ({ name, igId }) => (
-  <div className="bg-gray-800 p-4 rounded-lg shadow-lg text-white mb-4">
-    <h3 className="text-xl font-semibold">{name}</h3>
-    <a
-      href={`https://www.instagram.com/${igId}`}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="text-[#FF1493] mt-2 hover:underline"
-    >
-      View on Instagram
-    </a>
-  </div>
-);
-
 const BrandsThatChooseConture = () => {
   const brands = [
     {
