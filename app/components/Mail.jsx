@@ -7,9 +7,9 @@ const Mail = () => {
         </h2>
         <h3 className="text-xl mt-2 text-center">Contact Conture</h3>
         <p className="mt-2 text-center">
-          Have a question or want to chat about your video strategy? Our team of
-          short-form content experts is ready to help you make a splash in the
-          digital world. Reach out at business@conturemedia.com.
+          Have a question or want to chat about your strategy? Our team of
+          content experts is ready to help you make a splash in the digital
+          world. Reach out at business@conturemedia.com
         </p>
       </div>
     </div>

@@ -11,18 +11,19 @@ const ShortFormVideoEditing = () => {
     <div className=" py-12">
       <div className="container mx-auto">
         <h1 className="text-3xl font-semibold text-white mb-6 uppercase">
-          short form content
+          SHORT FORM CONTEN
         </h1>
-        <p className="text-gray-400 mb-8">just videos , just videos </p>
+        <p className="text-gray-400 mb-8">Just content, Just Content </p>
         <p className="text-gray-400 mb-3">
-          we do one thing - we just do it with a laser focus and bette than
-          anyone else If you&apos;re looking for an agency that gets lost in a
-          sea of services without excelling in any, we&apos;re not for you.
+          We excel in one thing – we craft short-form content with a laser
+          focus, better than anyone else. If you&apos;re looking for an agency
+          that stands out with exceptional content strategy, rather than one
+          that dabbles in everything without mastery, Conture Media is for you.
         </p>
         <p className="text-gray-400 mb-5">
-          If you want a partner that zeroes in on impactful, scroll-stopping
-          video content that speaks volumes in mere seconds and shows clear ROI,
-          welcome to Conture.
+          If you seek a partner who zeroes in on creating impactful,
+          scroll-stopping content that captures attention in seconds and
+          delivers a clear ROI, you&apos;ve found the right place.
         </p>
         <button className="bg-[#ff1491c7] text-white px-4 py-2 rounded-lg hover:bg-[#FF1493]">
           <a href="https://calendly.com/auditmeet/30min?month=2024-03">
@@ -33,12 +34,12 @@ const ShortFormVideoEditing = () => {
           Schedule Your FREE Strategy Call Now
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-          <ExpertiseItem title="Short-Form Video Content" />
-          <ExpertiseItem title="Viral Video Campaigns" />
-          <ExpertiseItem title="Social Media Storytelling" />
-          <ExpertiseItem title="Brand Narrative Shorts" />
-          <ExpertiseItem title="Micro-Content Strategy" />
-          <ExpertiseItem title="Platform-Specific Video Editing" />
+          <ExpertiseItem title="Short - Form Video Content " />
+          <ExpertiseItem title="Video Editing" />
+          <ExpertiseItem title="Social Media Management " />
+          <ExpertiseItem title="Personal Branding" />
+          <ExpertiseItem title="Content Strategy " />
+          <ExpertiseItem title="Media Production" />
         </div>
       </div>
     </div>

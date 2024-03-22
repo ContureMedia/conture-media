@@ -20,23 +20,24 @@ const PriceCard = () => {
             </h2>
             <p className="flex  items-center justify-start text-sm gap-2">
               <IoMdArrowDropright fontSize={19} className="text-green-500" />{" "}
-              Professional edit for one short-form video
+              Tailored content for one piece of short-form content
             </p>
             <p className="flex  items-center justify-start text-sm gap-2">
               <IoMdArrowDropright fontSize={19} className="text-green-500" /> 1
-              revision round
+              One round of revisions
             </p>
             <p className="flex  items-center justify-start text-sm gap-2">
               <IoMdArrowDropright fontSize={19} className="text-green-500" />{" "}
-              Captioning and subtitles
+              Inclusion of captions and subtitles for accessibility
             </p>
             <p className="flex  items-center justify-start text-sm gap-2">
               <IoMdArrowDropright fontSize={19} className="text-green-500" />{" "}
-              Basic motion graphics
+              Basic Graphics enhancements
             </p>
             <p className="flex  items-center justify-start text-sm gap-2">
               <IoMdArrowDropright fontSize={19} className="text-green-500" />{" "}
-              Optimized for TikTok and Instagram Reels
+              Content optimization for platforms like TikTok, Youtube and
+              Instagram
             </p>
             <a href="https://calendly.com/auditmeet/30min?month=2024-03">
               <div className="flex items-center justify-center">
@@ -51,23 +52,24 @@ const PriceCard = () => {
             </h2>
             <p className="flex  items-center justify-start text-sm gap-2">
               <IoMdArrowDropright fontSize={19} className="text-green-500" />{" "}
-              10-week campaign, 3 custom videos/week
+              8-week intensive campaign, with 3 customized pieces of content per
+              week
             </p>
             <p className="flex  items-center justify-start text-sm gap-2">
               <IoMdArrowDropright fontSize={19} className="text-green-500" />{" "}
-              Content strategy development
+              Development of a robust content strategy
             </p>
             <p className="flex  items-center justify-start text-sm gap-2">
               <IoMdArrowDropright fontSize={19} className="text-green-500" />{" "}
-              Social media profile optimization
+              Optimization of social media profiles for maximum impact
             </p>
             <p className="flex  items-center justify-start text-sm gap-2">
               <IoMdArrowDropright fontSize={19} className="text-green-500" />{" "}
-              Engagement and growth tactics coaching
+              Personalized coaching on engagement and growth tactics
             </p>
             <p className="flex  items-center justify-start text-sm gap-2">
               <IoMdArrowDropright fontSize={19} className="text-green-500" />{" "}
-              Bi-weekly analytics review
+              Regular analytics and strategic reviews bi-weekly
             </p>
             <a href="https://calendly.com/auditmeet/30min?month=2024-03">
               <div className="flex items-center justify-center">
@@ -81,24 +83,25 @@ const PriceCard = () => {
               Aspiring Brand Explosion
             </h2>
             <p className="flex  items-center justify-start text-sm gap-2">
-              <IoMdArrowDropright fontSize={19} className="text-green-500" />{" "}
-              Daily custom videos for 8 weeks
+              <IoMdArrowDropright fontSize={19} className="text-green-500" /> A
+              daily supply of tailored content for 8 weeks
             </p>
             <p className="flex  items-center justify-start text-sm gap-2">
               <IoMdArrowDropright fontSize={19} className="text-green-500" />{" "}
-              Social media funnel creation
+              Creation of a strategic social media funnel
             </p>
             <p className="flex  items-center justify-start text-sm gap-2">
               <IoMdArrowDropright fontSize={19} className="text-green-500" />{" "}
-              Customized storytelling framework
+              Bespoke storytelling framework to define your brand&apos;s
+              narrative
             </p>
             <p className="flex  items-center justify-start text-sm gap-2">
               <IoMdArrowDropright fontSize={19} className="text-green-500" />{" "}
-              Cross-platform content adaptation
+              Adaptation of content across various social media platforms
             </p>
             <p className="flex  items-center justify-start text-sm gap-2">
               <IoMdArrowDropright fontSize={19} className="text-green-500" />{" "}
-              Weekly analytics and strategy
+              Ongoing analytics and strategic insights on a weekly basis
             </p>
             <a href="https://calendly.com/auditmeet/30min?month=2024-03">
               <div className="flex items-center justify-center">
