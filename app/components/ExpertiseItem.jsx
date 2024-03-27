@@ -11,7 +11,7 @@ const ShortFormVideoEditing = () => {
     <div className=" py-12">
       <div className="container mx-auto">
         <h1 className="text-3xl font-semibold text-white mb-6 uppercase">
-          SHORT FORM CONTEN
+          SHORT FORM CONTENT
         </h1>
         <p className="text-gray-400 mb-8">Just content, Just Content </p>
         <p className="text-gray-400 mb-3">
