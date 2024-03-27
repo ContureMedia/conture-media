@@ -1,5 +1,6 @@
 const flattenColorPalette =
   require("tailwindcss/lib/util/flattenColorPalette").default;
+import { withUt } from "uploadthing/tw";
 
 function addVariablesForColors({ addBase, theme }) {
   let allColors = flattenColorPalette(theme("colors"));
@@ -13,6 +14,15 @@ function addVariablesForColors({ addBase, theme }) {
 }
 
 /** @type {import('tailwindcss').Config} */
+
+export default withUt({
+  content: [
+    "./pages/**/*.{js,jsx}",
+    "./components/**/*.{js,jsx}",
+    "./app/**/*.{js,jsx}",
+    "./src/**/*.{js,jsx}",
+  ],
+});
 module.exports = {
   darkMode: ["class"],
   content: [

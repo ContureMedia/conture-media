@@ -13,6 +13,7 @@
     "@prisma/client": "^5.11.0",
     "@radix-ui/react-accordion": "^1.1.2",
     "@radix-ui/react-slot": "^1.0.2",
+    "@uploadthing/react": "^6.4.1",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "framer-motion": "^11.0.8",
@@ -23,7 +24,8 @@
     "react-icons": "^5.0.1",
     "react-quill": "^2.0.0",
     "tailwind-merge": "^2.2.1",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "uploadthing": "^6.7.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.0.1",
