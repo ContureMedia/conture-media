@@ -1,20 +1,22 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
-import Image from "next/image";
 import "react-quill/dist/quill.snow.css";
 import { UploadButton } from "@/utils/uploadthing";
+import axios from "axios";
+import { useRouter } from "next/navigation";
 
 const QuillNoSSRWrapper = dynamic(() => import("react-quill"), { ssr: false });
 
 const AdminDashboard = () => {
-  const [image, setImage] = useState({ key: "", url: "" });
+  const [image, setImage] = useState("");
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
   const [isButtonEnabled, setIsButtonEnabled] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
-    if (image || title || content) {
+    if (image.key || title || content || image.url) {
       setIsButtonEnabled(true);
     } else {
       setIsButtonEnabled(false);
@@ -26,9 +28,18 @@ const AdminDashboard = () => {
     console.log("Title: ", title);
     console.log("Content: ", content);
 
+    const response = await axios.post("/api/create-blog", {
+      title,
+      content,
+      image,
+    });
+
+    console.log("Response: ", response.data);
+    router.push("/blog");
+
     setContent("");
     setTitle("");
-    setImage({ key: "", url: "" });
+    setImage("");
     setIsButtonEnabled(false);
   };
   return (
@@ -40,7 +51,7 @@ const AdminDashboard = () => {
           onClientUploadComplete={(res) => {
             console.log("Files: ", res);
             alert("Upload Completed");
-            setImage({ key: res[0].key, url: res[0].url });
+            setImage(res[0].url);
           }}
           onUploadError={(error) => {
             alert(`ERROR! ${error.message}`);
