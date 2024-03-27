@@ -18,5 +18,5 @@ model Post {
   title     String
   content   String
   image     String
-  date      DateTime @default(now())
+  date      DateTime  @default(now())
 }
