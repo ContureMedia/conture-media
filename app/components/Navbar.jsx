@@ -132,6 +132,15 @@ const Navbar = () => {
                             Get Free E-Book
                           </Link>
                         </li>
+                        <li>
+                          <Link
+                            href="/blog"
+                            onClick={() => setIsOpen(false)}
+                            className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                          >
+                            Blog
+                          </Link>
+                        </li>
                       </ul>
                       <div className="py-1">
                         <Link
