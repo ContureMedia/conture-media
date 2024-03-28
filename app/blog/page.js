@@ -29,7 +29,7 @@ const Blog = () => {
 
   return (
     <div
-      className="p-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+      className="p-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4"
       style={{
         background: "radial-gradient(circle, #111 75%, black 100%)",
       }}
