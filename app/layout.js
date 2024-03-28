@@ -7,9 +7,9 @@ import SocialLinks from "./components/SocialLinks";
 const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title:
-    "Home - Surging Jubilant Discovery: Conture Media Unleashes Remarkable Short Form Content Marketing",
+    "Conture Media - Video Editing, Social Media Marketing, and Content Creation Services | Conture Media",
   description:
-    "Embrace the energy of short form content marketing with Conture Media's professional team. Our unique approach guarantees remarkable results.",
+    "Conture Media is a digital marketing agency that specializes in video editing, social media marketing, and content creation services. We help businesses grow their online presence and reach their target audience through engaging video content and social media marketing strategies.",
   icons: {
     icon: ["/favicon.ico?v=4"],
     apple: ["/apple-touch-icon.png?v=4"],
