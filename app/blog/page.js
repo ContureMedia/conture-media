@@ -19,7 +19,7 @@ const Blog = () => {
       setTimeout(() => {
         localStorage.removeItem("blogs");
         getBlogs();
-      }, 300000);
+      }, 10000);
     }
   };
 
