@@ -2,9 +2,9 @@
 import React, { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
 import "react-quill/dist/quill.snow.css";
-import { UploadButton } from "@/utils/uploadthing";
 import axios from "axios";
 import { useRouter } from "next/navigation";
+import ImageUpload from "../upload/ImageUpload";
 
 const QuillNoSSRWrapper = dynamic(() => import("react-quill"), { ssr: false });
 
@@ -24,10 +24,6 @@ const AdminDashboard = () => {
   }, [image, title, content]);
 
   const handleClick = async () => {
-    console.log("Image: ", image);
-    console.log("Title: ", title);
-    console.log("Content: ", content);
-
     const response = await axios.post("/api/create-blog", {
       title,
       content,
@@ -45,19 +41,13 @@ const AdminDashboard = () => {
   return (
     <div className="container mx-auto p-4">
       <div className="flex flex-col items-center">
-        <UploadButton
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold  px-4 py-5 rounded"
-          endpoint="imageUploader"
-          onClientUploadComplete={(res) => {
-            console.log("Files: ", res);
-            alert("Upload Completed");
-            setImage(res[0].url);
-          }}
-          onUploadError={(error) => {
-            alert(`ERROR! ${error.message}`);
-          }}
-        />
-
+        <label
+          htmlFor="image"
+          className="block text-start w-full font-bold lg:text-4xl md:text-3xl sm:text-2xl text-xl mb-4 text-gray-700"
+        >
+          Image
+        </label>
+        <ImageUpload setImage={setImage} />
         <label
           htmlFor="title"
           className="text-start w-full font-bold lg:text-4xl md:text-3xl sm:text-2xl text-xl mb-4"
