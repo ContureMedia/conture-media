@@ -3,7 +3,6 @@ import React, { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
 import "react-quill/dist/quill.snow.css";
 import axios from "axios";
-import { useRouter } from "next/navigation";
 import ImageUpload from "../upload/ImageUpload";
 
 const QuillNoSSRWrapper = dynamic(() => import("react-quill"), { ssr: false });
@@ -13,7 +12,6 @@ const AdminDashboard = () => {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
   const [isButtonEnabled, setIsButtonEnabled] = useState(false);
-  const router = useRouter();
 
   useEffect(() => {
     if (image.key || title || content || image.url) {
@@ -31,7 +29,9 @@ const AdminDashboard = () => {
     });
 
     console.log("Response: ", response.data);
-    router.push("/blog");
+    alert("Blog created successfully");
+    localStorage.removeItem("blogs");
+    window.location.reload();
 
     setContent("");
     setTitle("");

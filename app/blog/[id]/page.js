@@ -21,6 +21,19 @@ const BlogID = () => {
     }
   }, [id]);
 
+  if (!blog?.image) {
+    return (
+      <div className="w-full bg-black h-full p-5">
+        <div className="flex flex-col bg-gray-900 rounded-lg p-5 mt-5 mx-5 animate-pulse">
+          <div className="w-full overflow-hidden h-[55vh] bg-gray-700"></div>
+
+          <p className="text-gray-700 border border-gray-600 dark:text-gray-200 bg-gray-700 p-5 w-full mt-2 md:p-20 md:-mt-10 md:w-1/2 mx-auto"></p>
+          <div className="flex justify-between items-center mt-4 p-5"></div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div
       className=""

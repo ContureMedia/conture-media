@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import axios from "axios";
+import BlogCardSkeleton from "../components/BlogCardSkeleton";
 
 const Blog = () => {
   const [blogs, setBlogs] = useState([]);
@@ -12,14 +13,18 @@ const Blog = () => {
     if (savedBlogs) {
       setBlogs(JSON.parse(savedBlogs));
     } else {
-      const res = await axios.get("/api/get-blogs");
+      const res = await axios.get("/api/get-blogs", {
+        headers: {
+          "Cache-Control": "no-cache, no-store, must-revalidate",
+        },
+      });
       const data = res.data;
       setBlogs(data.data);
       localStorage.setItem("blogs", JSON.stringify(data.data));
       setTimeout(() => {
         localStorage.removeItem("blogs");
         getBlogs();
-      }, 10000);
+      }, 15000);
     }
   };
 
@@ -27,6 +32,12 @@ const Blog = () => {
     getBlogs();
   }, []);
 
+  if (!blogs[0]?.image)
+    return (
+      <div className="p-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 bg-black">
+        <BlogCardSkeleton />;
+      </div>
+    );
   return (
     <div
       className="p-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4"
@@ -41,13 +52,13 @@ const Blog = () => {
             key={blog?.id}
             className="flex flex-col justify-center items-center bg-black rounded-md overflow-hidden"
           >
-            <div className="bg-gray-950 shadow-lg overflow-hidden max-w-lg w-full">
+            <div className="bg-gray-950 shadow-lg overflow-hidden max-w-xl w-full">
               <Image
-                width={400}
+                width={600}
                 height={400}
                 src={blog?.image || "https://source.unsplash.com/random"}
                 alt="Blog Image"
-                className="w-full h-60 object-fill"
+                className="w-full  object-cover object-center"
               />
               <div className="p-5">
                 <h2 className="text-xl font-semibold text-gray-300 mb-2">
