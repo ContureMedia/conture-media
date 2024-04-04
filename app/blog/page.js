@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import axios from "axios";
@@ -7,40 +7,55 @@ import BlogCardSkeleton from "../components/BlogCardSkeleton";
 
 const Blog = () => {
   const [blogs, setBlogs] = useState([]);
+  useEffect(() => {
+    const clearLocalStorage = () => {
+      localStorage.removeItem("blogs");
+    };
+    window.addEventListener("beforeunload", clearLocalStorage);
 
-  const getBlogs = async () => {
+    return () => {
+      window.removeEventListener("beforeunload", clearLocalStorage);
+    };
+  }, []);
+
+  const getBlogs = useCallback(async () => {
     const savedBlogs = localStorage.getItem("blogs");
     if (savedBlogs) {
       setBlogs(JSON.parse(savedBlogs));
     } else {
       const res = await axios.get("/api/get-blogs", {
         headers: {
-          "Cache-Control": "no-cache, no-store, must-revalidate",
+          "Cache-Control": "no-cache, no-store, must-revalidate, max-age=0",
         },
       });
       const data = res.data;
       setBlogs(data.data);
       localStorage.setItem("blogs", JSON.stringify(data.data));
-      setTimeout(() => {
-        localStorage.removeItem("blogs");
-        getBlogs();
-      }, 15000);
     }
-  };
+  }, []);
+  const updateBlogsInLocalStorage = useCallback((deletedBlogId) => {
+    const savedBlogs = localStorage.getItem("blogs");
+    if (savedBlogs) {
+      const blogs = JSON.parse(savedBlogs);
+      const updatedBlogs = blogs.filter((blog) => blog.id !== deletedBlogId);
+      localStorage.setItem("blogs", JSON.stringify(updatedBlogs));
+    }
+  }, []);
 
   useEffect(() => {
     getBlogs();
-  }, []);
+    updateBlogsInLocalStorage();
+  }, [getBlogs, updateBlogsInLocalStorage]);
 
   if (!blogs[0]?.image)
     return (
-      <div className="p-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 bg-black">
+      <div className="p-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  gap-4 bg-black">
         <BlogCardSkeleton />;
       </div>
     );
   return (
     <div
-      className="p-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4"
+      className="p-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  gap-4"
       style={{
         background: "radial-gradient(circle, #111 75%, black 100%)",
       }}

@@ -3,23 +3,23 @@
 import axios from "axios";
 import Image from "next/image";
 import { useParams } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 
 const BlogID = () => {
   const { id } = useParams();
   const [blog, setBlog] = useState({});
 
-  const getBlog = async () => {
+  const getBlog = useCallback(async () => {
     const res = await axios.post(`/api/get-blogs/${id}`);
     const data = res.data;
     setBlog(data.data);
-  };
+  }, [id]);
 
   useEffect(() => {
     if (id) {
       getBlog();
     }
-  }, [id]);
+  }, [id, getBlog]);
 
   if (!blog?.image) {
     return (
