@@ -47,7 +47,7 @@ const Blog = () => {
     updateBlogsInLocalStorage();
   }, [getBlogs, updateBlogsInLocalStorage]);
 
-  if (!blogs[0]?.image)
+  if (blogs && !blogs[0]?.image)
     return (
       <div className="p-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  gap-4 bg-black">
         <BlogCardSkeleton />;
@@ -65,27 +65,53 @@ const Blog = () => {
           <Link
             href={`/blog/${blog?.id}`}
             key={blog?.id}
-            className="flex flex-col justify-center items-center bg-black rounded-md overflow-hidden"
+            className="block rounded-lg p-4 shadow-sm shadow-indigo-100"
           >
-            <div className="bg-gray-950 shadow-lg overflow-hidden max-w-xl w-full">
-              <Image
-                width={600}
-                height={400}
-                src={blog?.image || "https://source.unsplash.com/random"}
-                alt="Blog Image"
-                className="w-full  object-cover object-center"
-              />
-              <div className="p-5">
-                <h2 className="text-xl font-semibold text-gray-300 mb-2">
-                  {blog?.title}
-                </h2>
-                <div className="flex justify-between items-center">
-                  <div className="flex items-center">
-                    <span className="text-gray-300 text-sm">Admin</span>
-                  </div>
-                  <span className="text-gray-600 text-sm">
+            <Image
+              width={300}
+              height={200}
+              alt=""
+              src={blog?.image || "https://source.unsplash.com/random"}
+              className="h-56 w-full rounded-md object-cover"
+            />
+
+            <div className="mt-2">
+              <dl>
+                <div>
+                  <dt className="sr-only">Title</dt>
+
+                  <dd className=" text-gray-100 text-xl">{blog?.title}</dd>
+                </div>
+
+                <div className="text-gray-300 text-sm">
+                  <dt className="sr-only">Date</dt>
+
+                  <dd className="font-medium ">
                     {new Date(blog?.date).toDateString()}
-                  </span>
+                  </dd>
+                </div>
+              </dl>
+
+              <div className="mt-6 flex items-center gap-8 text-xs">
+                <div className="sm:inline-flex sm:shrink-0 sm:items-center sm:gap-2">
+                  <svg
+                    className="size-4 text-purple-700"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"
+                    />
+                  </svg>
+
+                  <div className="mt-1.5 sm:mt-0">
+                    <p className="text-gray-500">Admin</p>
+                  </div>
                 </div>
               </div>
             </div>
