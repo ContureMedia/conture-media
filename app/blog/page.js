@@ -21,7 +21,11 @@ const Blog = () => {
   const getBlogs = useCallback(async () => {
     const savedBlogs = localStorage.getItem("blogs");
     if (savedBlogs) {
-      setBlogs(JSON.parse(savedBlogs));
+      try {
+        setBlogs(JSON.parse(savedBlogs));
+      } catch (error) {
+        console.error("Error parsing blogs from localStorage:", error);
+      }
     } else {
       const res = await axios.get("/api/get-blogs", {
         headers: {
@@ -36,9 +40,13 @@ const Blog = () => {
   const updateBlogsInLocalStorage = useCallback((deletedBlogId) => {
     const savedBlogs = localStorage.getItem("blogs");
     if (savedBlogs) {
-      const blogs = JSON.parse(savedBlogs);
-      const updatedBlogs = blogs.filter((blog) => blog.id !== deletedBlogId);
-      localStorage.setItem("blogs", JSON.stringify(updatedBlogs));
+      try {
+        const blogs = JSON.parse(savedBlogs);
+        const updatedBlogs = blogs.filter((blog) => blog.id !== deletedBlogId);
+        localStorage.setItem("blogs", JSON.stringify(updatedBlogs));
+      } catch (error) {
+        console.error("Error parsing blogs from localStorage:", error);
+      }
     }
   }, []);
 
