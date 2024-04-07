@@ -26,8 +26,8 @@ const AllBLogs = () => {
 
   const handleClick = async (id) => {
     try {
-      const res = await axios.delete(`/api/delete-blog/${id}`);
-      if (res.data && res.data.success) {
+      const res = await axios.post("/api/delete-blog", { id });
+      if (res.data) {
         getBlogs();
       } else {
         console.error("Unexpected response from /api/delete-blog:", res.data);
