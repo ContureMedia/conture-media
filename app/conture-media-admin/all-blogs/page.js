@@ -3,6 +3,8 @@ import { useCallback, useEffect, useState } from "react";
 import axios from "axios";
 import Image from "next/image";
 import Link from "next/link";
+import { FaRegEdit } from "react-icons/fa";
+import { MdDeleteOutline } from "react-icons/md";
 
 const AllBLogs = () => {
   const [blogs, setBlogs] = useState([]);
@@ -70,16 +72,17 @@ const AllBLogs = () => {
               <div className="flex items-center justify-center gap-2 md:gap-4">
                 <Link
                   href={`/conture-media-admin/all-blogs/${item?.id}`}
-                  className="text-gray-200 text-sm border rounded px-3 py-2 duration-150 bg-sky-500 hover:bg-sky-700"
+                  className="text-gray-200 text-sm border rounded px-3 py-2 font-bold flex items-center justify-center gap-1 duration-150 bg-sky-500 hover:bg-sky-700"
                 >
-                  Update
+                  <FaRegEdit fontSize={20} className="mb-[1px]" />
+                  Edit
                 </Link>
 
                 <button
                   onClick={() => handleClick(item?.id)}
-                  className="text-gray-200 text-sm border rounded px-3 py-2 duration-150 bg-red-500 hover:bg-red-600"
+                  className="text-gray-200 text-sm border rounded font-bold flex items-center justify-center gap-1 px-3 py-2 duration-150 bg-red-500 hover:bg-red-600"
                 >
-                  Delete
+                  <MdDeleteOutline fontSize={20} className="mb-[1px]" /> Delete
                 </button>
               </div>
             </li>

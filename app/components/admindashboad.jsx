@@ -1,11 +1,8 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import dynamic from "next/dynamic";
-import "react-quill/dist/quill.snow.css";
 import axios from "axios";
 import ImageUpload from "../upload/ImageUpload";
-
-const QuillNoSSRWrapper = dynamic(() => import("react-quill"), { ssr: false });
+import Editor from "./Editor";
 
 const AdminDashboard = () => {
   const [image, setImage] = useState("");
@@ -69,28 +66,7 @@ const AdminDashboard = () => {
         >
           <span className="text-gray-700 text-start">Content</span>
         </label>
-        <QuillNoSSRWrapper
-          theme="snow"
-          id="content"
-          modules={{
-            toolbar: [
-              [{ header: [1, 2, false] }],
-              ["bold", "italic", "underline"],
-              ["image", "code-block"],
-            ],
-          }}
-          formats={[
-            "header",
-            "bold",
-            "italic",
-            "underline",
-            "strike",
-            "blockquote",
-          ]}
-          value={content}
-          onChange={setContent}
-          className="mb-4 w-full"
-        />
+        <Editor content={content} setContent={setContent} />
         <button
           onClick={handleClick}
           disabled={!isButtonEnabled}
