@@ -7,6 +7,7 @@ import BlogCardSkeleton from "../components/BlogCardSkeleton";
 
 const Blog = () => {
   const [blogs, setBlogs] = useState([]);
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
     const clearLocalStorage = () => {
       localStorage.removeItem("blogs");
@@ -19,6 +20,7 @@ const Blog = () => {
   }, []);
 
   const getBlogs = useCallback(async () => {
+    setLoading(true);
     const savedBlogs = localStorage.getItem("blogs");
     if (savedBlogs) {
       try {
@@ -36,6 +38,7 @@ const Blog = () => {
       setBlogs(data.data);
       localStorage.setItem("blogs", JSON.stringify(data.data));
     }
+    setLoading(false);
   }, []);
   const updateBlogsInLocalStorage = useCallback((deletedBlogId) => {
     const savedBlogs = localStorage.getItem("blogs");
@@ -52,18 +55,31 @@ const Blog = () => {
 
   useEffect(() => {
     getBlogs();
-    updateBlogsInLocalStorage();
-  }, [getBlogs, updateBlogsInLocalStorage]);
+  }, [getBlogs]);
 
-  if (blogs && !blogs[0]?.image)
+  if (loading) {
     return (
-      <div className="p-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  gap-4 bg-black">
+      <div className="p-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 bg-black">
         <BlogCardSkeleton />;
       </div>
     );
+  }
+
+  if (blogs.length === 0) {
+    return (
+      <div className="flex items-center justify-center  bg-black">
+        <div className="p-6 m-4  rounded shadow-lg text-center">
+          <h2 className="text-2xl font-bold mb-4 text-gray-100">
+            No blogs available
+          </h2>
+          <p className="text-gray-200">Check back later for more updates.</p>
+        </div>
+      </div>
+    );
+  }
   return (
     <div
-      className="p-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  gap-4"
+      className="p-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
       style={{
         background: "radial-gradient(circle, #111 75%, black 100%)",
       }}
