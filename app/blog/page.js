@@ -40,10 +40,23 @@ const Blog = () => {
     }
     setLoading(false);
   }, []);
+  const updateBlogsInLocalStorage = useCallback((deletedBlogId) => {
+    const savedBlogs = localStorage.getItem("blogs");
+    if (savedBlogs) {
+      try {
+        const blogs = JSON.parse(savedBlogs);
+        const updatedBlogs = blogs.filter((blog) => blog.id !== deletedBlogId);
+        localStorage.setItem("blogs", JSON.stringify(updatedBlogs));
+      } catch (error) {
+        console.error("Error parsing blogs from localStorage:", error);
+      }
+    }
+  }, []);
 
   useEffect(() => {
+    updateBlogsInLocalStorage();
     getBlogs();
-  }, [getBlogs]);
+  }, [getBlogs, updateBlogsInLocalStorage]);
 
   if (loading) {
     return (
