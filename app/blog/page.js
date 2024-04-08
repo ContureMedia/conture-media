@@ -67,6 +67,7 @@ const Blog = () => {
   }
 
   if (blogs.length === 0) {
+    getBlogs();
     return (
       <div className="flex items-center justify-center  bg-black">
         <div className="p-6 m-4  rounded shadow-lg text-center">
