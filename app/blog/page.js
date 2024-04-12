@@ -8,25 +8,29 @@ import BlogCardSkeleton from "../components/BlogCardSkeleton";
 const Blog = () => {
   const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(true);
+
   useEffect(() => {
-    const clearLocalStorage = () => {
-      localStorage.removeItem("blogs");
+    const clearSessionStorage = () => {
+      sessionStorage.removeItem("blogs");
     };
-    window.addEventListener("beforeunload", clearLocalStorage);
+    window.addEventListener("beforeunload", clearSessionStorage);
 
     return () => {
-      window.removeEventListener("beforeunload", clearLocalStorage);
+      window.removeEventListener("beforeunload", clearSessionStorage);
     };
+  }, []);
+  useEffect(() => {
+    sessionStorage.removeItem("blogs");
   }, []);
 
   const getBlogs = useCallback(async () => {
     setLoading(true);
-    const savedBlogs = localStorage.getItem("blogs");
+    const savedBlogs = sessionStorage.getItem("blogs");
     if (savedBlogs) {
       try {
         setBlogs(JSON.parse(savedBlogs));
       } catch (error) {
-        console.error("Error parsing blogs from localStorage:", error);
+        console.error("Error parsing blogs from sessionStorage:", error);
       }
     } else {
       try {
@@ -38,7 +42,7 @@ const Blog = () => {
         const data = res.data;
         if (data.data) {
           setBlogs(data.data);
-          localStorage.setItem("blogs", JSON.stringify(data.data));
+          sessionStorage.setItem("blogs", JSON.stringify(data.data));
         } else {
           throw new Error("Undefined data");
         }
@@ -61,7 +65,7 @@ const Blog = () => {
       </div>
     );
   }
-  if (blogs.length === 0) {
+  if (blogs?.length === 0) {
     return (
       <div className="flex items-center justify-center  bg-black">
         <div className="p-6 m-4  rounded shadow-lg text-center">
