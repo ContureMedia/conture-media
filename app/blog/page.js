@@ -8,6 +8,7 @@ import BlogCardSkeleton from "../components/BlogCardSkeleton";
 const Blog = () => {
   const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(true);
+  localStorage.removeItem("blogs");
   useEffect(() => {
     const clearLocalStorage = () => {
       localStorage.removeItem("blogs");
