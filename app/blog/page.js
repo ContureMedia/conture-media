@@ -8,7 +8,6 @@ import BlogCardSkeleton from "../components/BlogCardSkeleton";
 const Blog = () => {
   const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(true);
-  localStorage.removeItem("blogs");
   useEffect(() => {
     const clearLocalStorage = () => {
       localStorage.removeItem("blogs");
@@ -30,34 +29,30 @@ const Blog = () => {
         console.error("Error parsing blogs from localStorage:", error);
       }
     } else {
-      const res = await axios.get("/api/get-blogs", {
-        headers: {
-          "Cache-Control": "no-cache, no-store, must-revalidate, max-age=0",
-        },
-      });
-      const data = res.data;
-      setBlogs(data.data);
-      localStorage.setItem("blogs", JSON.stringify(data.data));
+      try {
+        const res = await axios.get("/api/get-blogs", {
+          headers: {
+            "Cache-Control": "no-cache, no-store, must-revalidate, max-age=0",
+          },
+        });
+        const data = res.data;
+        if (data.data) {
+          setBlogs(data.data);
+          localStorage.setItem("blogs", JSON.stringify(data.data));
+        } else {
+          throw new Error("Undefined data");
+        }
+      } catch (error) {
+        console.error("Error fetching blogs:", error);
+        window.location.reload();
+      }
     }
     setLoading(false);
   }, []);
-  const updateBlogsInLocalStorage = useCallback((deletedBlogId) => {
-    const savedBlogs = localStorage.getItem("blogs");
-    if (savedBlogs) {
-      try {
-        const blogs = JSON.parse(savedBlogs);
-        const updatedBlogs = blogs.filter((blog) => blog.id !== deletedBlogId);
-        localStorage.setItem("blogs", JSON.stringify(updatedBlogs));
-      } catch (error) {
-        console.error("Error parsing blogs from localStorage:", error);
-      }
-    }
-  }, []);
 
   useEffect(() => {
-    updateBlogsInLocalStorage();
     getBlogs();
-  }, [getBlogs, updateBlogsInLocalStorage]);
+  }, [getBlogs]);
 
   if (loading) {
     return (
@@ -66,9 +61,7 @@ const Blog = () => {
       </div>
     );
   }
-
   if (blogs.length === 0) {
-    getBlogs();
     return (
       <div className="flex items-center justify-center  bg-black">
         <div className="p-6 m-4  rounded shadow-lg text-center">
