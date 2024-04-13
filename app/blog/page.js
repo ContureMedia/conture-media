@@ -9,49 +9,27 @@ const Blog = () => {
   const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    const clearSessionStorage = () => {
-      sessionStorage.removeItem("blogs");
-    };
-    window.addEventListener("beforeunload", clearSessionStorage);
-
-    return () => {
-      window.removeEventListener("beforeunload", clearSessionStorage);
-    };
-  }, []);
-  useEffect(() => {
-    sessionStorage.removeItem("blogs");
-  }, []);
-
   const getBlogs = useCallback(async () => {
     setLoading(true);
-    const savedBlogs = sessionStorage.getItem("blogs");
-    if (savedBlogs) {
-      try {
-        setBlogs(JSON.parse(savedBlogs));
-      } catch (error) {
-        console.error("Error parsing blogs from sessionStorage:", error);
+
+    try {
+      const res = await axios.get("/api/get-blogs", {
+        headers: {
+          "Cache-Control": "no-cache, no-store, must-revalidate, max-age=0",
+        },
+      });
+      const data = res.data;
+      if (data.data) {
+        setBlogs(data.data);
+      } else {
+        throw new Error("Undefined data");
       }
-    } else {
-      try {
-        const res = await axios.get("/api/get-blogs", {
-          headers: {
-            "Cache-Control": "no-cache, no-store, must-revalidate, max-age=0",
-          },
-        });
-        const data = res.data;
-        if (data.data) {
-          setBlogs(data.data);
-          sessionStorage.setItem("blogs", JSON.stringify(data.data));
-        } else {
-          throw new Error("Undefined data");
-        }
-      } catch (error) {
-        console.error("Error fetching blogs:", error);
-        window.location.reload();
-      }
+    } catch (error) {
+      console.error("Error fetching blogs:", error);
+      window.location.reload();
+    } finally {
+      setLoading(false);
     }
-    setLoading(false);
   }, []);
 
   useEffect(() => {
