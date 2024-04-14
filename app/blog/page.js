@@ -2,39 +2,23 @@
 import React, { useEffect, useState, useCallback } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import axios from "axios";
+import { useDispatch, useSelector } from "react-redux";
 import BlogCardSkeleton from "../components/BlogCardSkeleton";
+import { getAllPosts } from "@/helper/PostSlice";
 
 const Blog = () => {
   const [blogs, setBlogs] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  const getBlogs = useCallback(async () => {
-    setLoading(true);
-
-    try {
-      const res = await axios.get("/api/get-blogs", {
-        headers: {
-          "Cache-Control": "no-cache, no-store, must-revalidate, max-age=0",
-        },
-      });
-      const data = res.data;
-      if (data.data) {
-        setBlogs(data.data);
-      } else {
-        throw new Error("Undefined data");
-      }
-    } catch (error) {
-      console.error("Error fetching blogs:", error);
-      window.location.reload();
-    } finally {
-      setLoading(false);
-    }
-  }, []);
+  const blogPOST = useSelector((state) => state.post.blogs.data);
+  const loading = useSelector((state) => state.post.loading);
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    getBlogs();
-  }, [getBlogs]);
+    dispatch(getAllPosts());
+  }, [dispatch]);
+
+  useEffect(() => {
+    setBlogs(blogPOST);
+  }, [blogPOST]);
 
   if (loading) {
     return (
