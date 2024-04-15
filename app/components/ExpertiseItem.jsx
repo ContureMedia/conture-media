@@ -37,7 +37,7 @@ const ShortFormVideoEditing = () => {
           <ExpertiseItem title="Short - Form Video Content " />
           <ExpertiseItem title="Video Editing" />
           <ExpertiseItem title="Social Media Management " />
-          <ExpertiseItem title="Personal Branding" />
+          <ExpertiseItem title="Personal & business" />
           <ExpertiseItem title="Content Strategy " />
           <ExpertiseItem title="Media Production" />
         </div>

@@ -10,12 +10,6 @@ export const metadata = {
     "Conture Media - Video Editing, Social Media Marketing, and Content Creation Services | Conture Media",
   description:
     "Conture Media is a digital marketing agency that specializes in video editing, social media marketing, and content creation services. We help businesses grow their online presence and reach their target audience through engaging video content and social media marketing strategies.",
-  icons: {
-    icon: ["/favicon.ico?v=4"],
-    apple: ["/apple-touch-icon.png?v=4"],
-    shortcut: ["/apple-touch-icon.png"],
-  },
-  manifest: "/site.webmanifest",
 };
 
 export default function RootLayout({ children }) {
