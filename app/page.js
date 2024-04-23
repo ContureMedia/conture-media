@@ -10,6 +10,7 @@ import ShortFormVideoEditing from "./components/ExpertiseItem";
 import ImpactInMotion from "./components/ImpactInMotion";
 import StrategySessionIdealFor from "./components/IdealForItem";
 import MailSection from "./components/MailSection";
+import VideoReview from "./components/VideoReview";
 
 export default function Home() {
   return (
@@ -27,8 +28,11 @@ export default function Home() {
         <div className=" w-full flex md:flex-row flex-col items-center justify-center ">
           <ShortFormVideoEditing />
         </div>
-        <div className="overflow-hidden w-full flex  items-center justify-center ">
+        <div className="overflow-hidden w-full items-center justify-center ">
           <BrandsThatChooseConture />
+        </div>
+        <div className="overflow-hidden w-full flex flex-col items-center justify-center ">
+          <VideoReview />
         </div>
         <div className=" w-full flex md:flex-row flex-col items-center justify-center p-3">
           <OurTeam />
