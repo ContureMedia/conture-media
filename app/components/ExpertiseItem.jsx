@@ -34,12 +34,14 @@ const ShortFormVideoEditing = () => {
           Schedule Your FREE Strategy Call Now
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-          <ExpertiseItem title="Short - Form Video Content " />
-          <ExpertiseItem title="Video Editing" />
-          <ExpertiseItem title="Social Media Management " />
-          <ExpertiseItem title="Personal & business" />
-          <ExpertiseItem title="Content Strategy " />
+          <ExpertiseItem title="Business & Personal Branding" />
+          <ExpertiseItem title="Video Editing " />
+          <ExpertiseItem title="Content Creation" />
+          <ExpertiseItem title="Content Strategy" />
+          <ExpertiseItem title="Social Media management" />
+          <ExpertiseItem title="Branding for Enterpreneurs" />
           <ExpertiseItem title="Media Production" />
+          <ExpertiseItem title="Animations & Graphicn Design" />
         </div>
       </div>
     </div>
