@@ -8,9 +8,8 @@ const VideoCard = () => {
 
   const videos = [
     {
-      src: "https://victoryempire.co/assets/videos/video11.mp4?v=919e79fa",
-      thumbnail:
-        "https://victoryempire.co/assets/videos/video11.mp4.jpg?v=919e79fa",
+      src: "/reviews/vid1.mp4",
+      thumbnail: "/reviews/img1.jpeg",
       alt: "Video 1",
     },
     {
