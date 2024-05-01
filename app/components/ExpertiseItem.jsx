@@ -1,7 +1,7 @@
 import React from "react";
 
 const ExpertiseItem = ({ title }) => (
-  <div className="bg-gray-800 p-4 rounded-lg shadow-lg font-bold text-white mb-4 text-left hover:shadow-2xl transition duration-300 ease-in-out transform hover:scale-105">
+  <div className="bg-gray-800 capitalize p-4 rounded-lg shadow-lg font-bold text-white mb-4 text-left hover:shadow-2xl transition duration-300 ease-in-out transform hover:scale-105">
     {title}
   </div>
 );
@@ -38,10 +38,10 @@ const ShortFormVideoEditing = () => {
           <ExpertiseItem title="Video Editing " />
           <ExpertiseItem title="Content Creation" />
           <ExpertiseItem title="Content Strategy" />
-          <ExpertiseItem title="Social Media management" />
+          <ExpertiseItem title="Social Media Management" />
           <ExpertiseItem title="Branding for Enterpreneurs" />
           <ExpertiseItem title="Media Production" />
-          <ExpertiseItem title="Animations & Graphicn Design" />
+          <ExpertiseItem title="Animation and Graphic Design" />
         </div>
       </div>
     </div>
