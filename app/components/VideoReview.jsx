@@ -38,8 +38,11 @@ const VideoCard = () => {
 
   return (
     <>
-      <h1 className="text-xl md:text-3xl font-bold my-5 text-center text-white">
-        Dive into our Video Reviews and Discover Your Next Favorite!
+      <h1 className="block xl:flex justify-center items-center text-xl md:text-[26px] font-bold my-5 text-white capitalize gap-2">
+        Dive into our video reviews to experience{" "}
+        <p className="font-bold from-blue-600 via-green-500 to-indigo-400 bg-gradient-to-r bg-clip-text text-transparent">
+          Trust, Authenticity, and Transparency
+        </p>
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
         {videos.map((video, index) => (

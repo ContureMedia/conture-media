@@ -22,6 +22,20 @@ export default function Home() {
           background: "radial-gradient(circle, #111 75%, black 100%)",
         }}
       >
+        <div className="w-full flex items-center justify-center flex-col ">
+          <h1 className=" text-center w-full capitalize flex-wrap text-4xl p-4  font-bold from-purple-600 via-pink-600 to-blue-600 bg-gradient-to-r bg-clip-text text-transparent">
+            What sets us apart?
+          </h1>
+          <span className="text-gray-300 capitalize mx-auto md:my-4 my-2 text-xs md:text-base text-center relative z-10 leading-relaxed tracking-normal">
+            <p className="text-gray-300 capitalize mx-auto md:my-4 my-2 text-2xl  text-center relative z-10 leading-relaxed tracking-normal font-bold">
+              Our community at Conture Media.
+            </p>{" "}
+            We prioritize building a family-first environment where you can
+            connect and collaborate with like-minded creators. Here, you&apos;re
+            encouraged to discuss trending topics and share insights, creating a
+            strong network of support and inspiration
+          </span>
+        </div>
         <div className=" w-full flex md:flex-row flex-col items-center justify-center ">
           <ImpactInMotion />
         </div>
@@ -33,6 +47,24 @@ export default function Home() {
         </div>
         <div className="overflow-hidden w-full flex flex-col items-center justify-center ">
           <VideoReview />
+        </div>
+        <div className="w-full flex items-center justify-center flex-col my-10 md:p-5">
+          <h2 className="text-4xl text-center p-4  font-bold from-purple-600 via-pink-600 to-blue-600 bg-gradient-to-r bg-clip-text text-transparent">
+            Vision and Purpose: Words from Our Founder
+          </h2>
+          <p className="text-center  tracking-wide my-1 text-sm ">
+            When you feel purposeless, find your purpose — and people will
+            follow, transforming everything.
+          </p>
+          <p className="text-center  tracking-wide my-1 text-sm ">
+            It&apos;s incredible—we navigate this unseen digital world, yet we
+            can&apos;t fully experience it until the very end. At Conture Media,
+            we embrace this journey, connecting and sharing every step of the
+            way. We believe everyone has a story, but not everyone has the
+            support they need. We strive to be that support, turning stories
+            into shared experiences.&quot; What do you really have, if not the
+            stories shaped by your journey?
+          </p>
         </div>
         <div className=" w-full flex md:flex-row flex-col items-center justify-center p-3">
           <OurTeam />
