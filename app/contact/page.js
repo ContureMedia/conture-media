@@ -3,7 +3,7 @@ import ContactForm from "./Contact";
 
 export const metadata = {
   title:
-    "Contact Us - Unveiling Daring Truth: Conture Media's Confidential Approach to Short Form Content Creation",
+    "Contact Us - Unveiling Daring Truth: Conture Media's Confidential Approach to Content Creation",
   description:
     "Discover the confidential strategies behind Conture Media's success in video editing, scriptwriting, and more. Unleash your brand's true potential today.",
 };

@@ -11,14 +11,17 @@ const ShortFormVideoEditing = () => {
     <div className=" py-12">
       <div className="container mx-auto">
         <h1 className="text-3xl font-semibold text-white mb-6 uppercase">
-          SHORT FORM CONTENT
+          CONTENT AND COMMUNITY Driven
         </h1>
-        <p className="text-gray-400 mb-8">Just content, Just Content </p>
+        <p className="text-gray-400 mb-8 capitalize">
+          for creators, Enterpreneurs, Businesses, artists and the people who
+          want to change the world for better !!
+        </p>
         <p className="text-gray-400 mb-3">
-          We excel in one thing – we craft short-form content with a laser
-          focus, better than anyone else. If you&apos;re looking for an agency
-          that stands out with exceptional content strategy, rather than one
-          that dabbles in everything without mastery, Conture Media is for you.
+          We specialize in one thing – helping creators produce exceptional
+          content with a community-focused approach. At Conture Media, we excel
+          in crafting strategies that not only stand out but also foster
+          collaboration and connections among creators.
         </p>
         <p className="text-gray-400 mb-5">
           If you seek a partner who zeroes in on creating impactful,
@@ -36,12 +39,13 @@ const ShortFormVideoEditing = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
           <ExpertiseItem title="Business & Personal Branding" />
           <ExpertiseItem title="Video Editing " />
-          <ExpertiseItem title="Content Creation" />
+          <ExpertiseItem title="Paid Advertisments" />
           <ExpertiseItem title="Content Strategy" />
           <ExpertiseItem title="Social Media Management" />
           <ExpertiseItem title="Branding for Enterpreneurs" />
           <ExpertiseItem title="Media Production" />
           <ExpertiseItem title="Animation and Graphic Design" />
+          <ExpertiseItem title="Digital Marketing" />
         </div>
       </div>
     </div>

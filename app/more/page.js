@@ -4,7 +4,7 @@ export const metadata = {
   title:
     "More services coming soon - Unlimited Potential: Elevate Your Brand with Conture Media's Unique Content Strategy",
   description:
-    "More content coming soon - Experience the unlimited possibilities of short form content branding with Conture Media. Choose the experts to take your brand to the next level.",
+    "More content coming soon - Experience the unlimited possibilities of content branding with Conture Media. Choose the experts to take your brand to the next level.",
 };
 const More = () => {
   return (
