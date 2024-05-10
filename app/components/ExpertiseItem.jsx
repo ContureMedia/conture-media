@@ -1,10 +1,36 @@
-import React from "react";
+"use client";
+import { useState, useEffect } from "react";
 
-const ExpertiseItem = ({ title }) => (
-  <div className="bg-gray-800 capitalize p-4 rounded-lg shadow-lg font-bold text-white mb-4 text-left hover:shadow-2xl transition duration-300 ease-in-out transform hover:scale-105">
-    {title}
-  </div>
-);
+function ExpertiseItem({ title }) {
+  const [color, setColor] = useState("#3b82f6");
+
+  useEffect(() => {
+    const colors = [
+      "#ef4444",
+      "#f59e0b",
+      "#10b981",
+      "#3b82f6",
+      "#6366f1",
+      "#8b5cf6",
+      "#ec4899",
+    ];
+    const interval = setInterval(() => {
+      const randomColor = colors[Math.floor(Math.random() * colors.length)];
+      setColor(randomColor);
+    }, 800);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <div
+      style={{ borderColor: color }}
+      className="bg-gray-800 capitalize border p-4 rounded-lg shadow-lg font-bold text-white mb-4 text-left hover:shadow-2xl transition duration-300 ease-in-out transform hover:scale-105 hover:bg-white hover:text-black"
+    >
+      {title}
+    </div>
+  );
+}
 
 const ShortFormVideoEditing = () => {
   return (
