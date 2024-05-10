@@ -4,8 +4,8 @@ import React from "react";
 const TeamMember = ({ name, title, image }) => (
   <div className="bg-gray-900 p-6 rounded-lg shadow-lg text-white hover:shadow-2xl transition duration-300 ease-in-out transform hover:scale-105">
     <Image
-      width={150}
-      height={150}
+      width={400}
+      height={300}
       src={"/" + encodeURIComponent(image.slice(1))}
       alt={name}
       className="w-full h-80 object-cover rounded-lg shadow-md"
@@ -26,9 +26,9 @@ const OurTeam = () => {
           image="/Manthan Gupta.jpg"
         />
         <TeamMember
-          name="Asia Gabriella"
+          name="julia cordy"
           title="Business Development Manager"
-          image="/Asia Gabriella.jpeg"
+          image="/julia cordy.jpeg"
         />
         <TeamMember
           name="Rohan Azad"
