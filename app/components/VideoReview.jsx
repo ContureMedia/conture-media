@@ -38,7 +38,7 @@ const VideoCard = () => {
 
   return (
     <>
-      <h1 className="block xl:flex justify-center items-center text-xl md:text-[26px] font-bold my-5 text-white capitalize gap-2">
+      <h1 className="flex flex-col text-center justify-center items-center text-xl md:text-[26px] font-bold my-5 text-white capitalize gap-2">
         Dive into our video reviews to experience{" "}
         <p className="font-bold from-blue-600 via-green-500 to-indigo-400 bg-gradient-to-r bg-clip-text text-transparent">
           Trust, Authenticity, and Transparency
