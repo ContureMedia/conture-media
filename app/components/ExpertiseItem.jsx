@@ -40,7 +40,7 @@ const ShortFormVideoEditing = () => {
           CONTENT AND COMMUNITY Driven
         </h1>
         <p className="text-gray-400 mb-8 capitalize">
-          for creators, Enterpreneurs, Businesses, artists and the people who
+          for creators, Entrepreneurs, Businesses, artists and the people who
           want to change the world for better !!
         </p>
         <p className="text-gray-400 mb-3">
@@ -68,7 +68,7 @@ const ShortFormVideoEditing = () => {
           <ExpertiseItem title="Paid Advertisments" />
           <ExpertiseItem title="Content Strategy" />
           <ExpertiseItem title="Social Media Management" />
-          <ExpertiseItem title="Branding for Enterpreneurs" />
+          <ExpertiseItem title="Branding for Entrepreneurs" />
           <ExpertiseItem title="Media Production" />
           <ExpertiseItem title="Animation and Graphic Design" />
           <ExpertiseItem title="Digital Marketing" />

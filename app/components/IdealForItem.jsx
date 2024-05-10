@@ -18,7 +18,7 @@ const StrategySessionIdealFor = () => {
           <IdealForItem description="Businesses looking to captivate audiences with high-impact Contact Creation." />
           <IdealForItem description="Brands striving to translate their vision into compelling narratives that stand out in the digital space." />
           <IdealForItem description="Creators seeking to skyrocket their social media engagement with diverse content crafted for today's quick-scrolling users." />
-          <IdealForItem description="Entrepreneurs who want to harness the power of content to tell their story and foster a loyal online community." />
+          <IdealForItem description="Entrepreneurss who want to harness the power of content to tell their story and foster a loyal online community." />
           <IdealForItem description="Organizations eager to outshine competitors with concise, impactful content that drives results." />
           <IdealForItem description="Artists searching for a creative agency committed to elevating their brand with exceptional content creation." />
         </ul>
