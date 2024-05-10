@@ -10,8 +10,10 @@ const TeamMember = ({ name, title, image }) => (
       alt={name}
       className="w-full h-80 object-cover rounded-lg shadow-md"
     />
-    <h3 className="text-base md:text-xl font-semibold mt-5">{name}</h3>
-    <p className="text-gray-400">{title}</p>
+    <h3 className="text-base md:text-xl font-semibold mt-5 capitalize">
+      {name}
+    </h3>
+    <p className="text-gray-400 capitalize">{title}</p>
   </div>
 );
 
