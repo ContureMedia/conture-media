@@ -22,72 +22,58 @@ export default TestimonalCards;
 const testimonials = [
   {
     quote:
-      "Working with Conture Media transformed my content approach in the bustling digital landscape of Mumbai. Their expertise in short-form content and video editing elevated my brand's online presence. An absolute must for those looking to captivate an audience effectively.",
-    name: "Anaya Patel",
-    location: "India ",
+      "Conture Media's content production and video editing expertise has been critical to growing our brand's digital reach. Their creative approaches and attention to cultural nuances make them the perfect ones in the industry.",
+    name: "Olivia Garcia",
+    location: "Spain (Europe)",
     star: 5,
   },
   {
     quote:
-      "In the competitive Australian market, Conture Media's innovative strategies and top-notch video editing services have set my brand apart. Their team understands the pulse of social media and how to engage audiences. Truly outstanding work!",
-    name: "Liam Smith",
+      "Working with Conture Media transformed my content strategy. Their content creation and video editing skills improved my brand's online presence. They are an absolute must-have for anyone trying to effectively engage an audience.",
+    name: "Anaya Patel",
     star: 4.5,
-    location: "Australia",
+    location: "India",
   },
   {
     quote:
-      "As a Canadian creator, I've seen a significant increase in engagement since partnering with Conture Media. Their short-form content is not just creative but also strategically aligned with my brand's identity. Their team's attention to detail is unparalleled.",
+      " As a Canadian creator, Ive noticed a substantial increase in interaction since working with Conture Media. Their content is innovative and strategically connected with my brands identity, and their teams attention to detail is remarkable.",
     name: "Sophie Martin",
     star: 4,
     location: "Canada ",
   },
   {
     quote:
-      "It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.",
-    name: "Jane Austen",
+      "Conture Media's distinctive practices and high-quality video editing services have distinguished my brand in the competitive Australian marketplace. Their team understands the current state of social media and how to engage people. It was a really great effort!",
+    name: "Liam Smith",
     star: 5,
-    location: "Pride and Prejudice",
+    location: "Australia",
   },
   {
     quote:
-      "Conture Media is a game-changer for any influencer or brand looking to make an impact in the U.S. market. Their cutting-edge short-form content and seamless video editing have been instrumental in my campaign's success. Absolutely stellar service!",
-    name: "Ella Johnson",
-    star: 4.5,
-    location: "USA ",
-  },
-  {
-    quote:
-      "The team at Conture Media understands the dynamic digital landscape of Germany. Their expertise in short-form content and video editing has significantly enhanced our marketing strategy. Highly efficient and professional.",
-    name: "Luca Müller",
-    star: 4,
-    location: "Germany  ",
-  },
-  {
-    quote:
-      "Singapore's fast-paced digital scene demands high-quality content, and Conture Media delivers just that. Their short-form content strategies and video editing prowess have propelled our marketing to new heights. Highly recommended for forward-thinking brands.",
-    name: "Aiden Tan",
-    star: 5,
-    location: "Singapore ",
-  },
-  {
-    quote:
-      "Conture Media's mastery in crafting captivating short-form content has significantly benefited our Italian luxury brand. Their strategic insights and superior video editing skills are unmatched. A true asset to any European business.",
-    name: "Isabella Rossi",
+      "Conture Media's expertise in compelling content has greatly benefited our Italian premium brand. Their strategic thoughts and expert film editing abilities are appreciable. They have worked as a valuable addition to my business.",
+    name: "Isabella Rossi ",
     star: 4.5,
     location: "Italy (Europe)",
   },
   {
     quote:
-      "In the vibrant and competitive market of South Korea, Conture Media stands out with their exceptional short-form content and video editing services. Their understanding of trends and audience engagement is unparalleled. A game-changer for any brand.",
-    name: "Ryan Lee",
+      "Conture Media meets the expectations of Singapore's fast-paced digital landscape by providing high-quality content. Their content strategies and video editing skills have increased our marketing efforts. They come highly recommended for inventive brands.",
+    name: "Aiden Tan",
     star: 4,
-    location: " South Korea",
+    location: " Singapore",
   },
   {
     quote:
-      "Conture Media's expertise in short-form content creation and video editing has been pivotal in increasing our Spanish brand's digital footprint. Their innovative strategies and attention to cultural nuances make them a top choice for European businesses.",
-    name: "Olivia Garcia",
+      "Conture Media understands the changing digital market. Their experience in content and video editing has really benefited our marketing approach. They are efficient and professional.",
+    name: "Luca Müller",
     star: 5,
-    location: "Spain (Europe)",
+    location: "Germany ",
+  },
+  {
+    quote:
+      "Conture Media is a game changer for any influencer or company trying to make an impression. Their cutting-edge content and smooth video editing helped my campaign succeed. They provide absolutely fantastic service!",
+    name: "Ella Johnson",
+    star: 4.5,
+    location: "USA",
   },
 ];
