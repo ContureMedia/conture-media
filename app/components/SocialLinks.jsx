@@ -6,7 +6,7 @@ const SocialLinks = () => {
   return (
     <div className="fixed right-0 top-1/2 transform -translate-y-1/2 space-y-3 bg-gray-800 p-2 rounded-l-xl z-[100] overflow-hidden">
       <a
-        href="https://wa.me/+916378467482?text=I'm%20interested%20"
+        href="https://wa.me/+917425081690?text=I'm%20interested%20"
         target="_blank"
         rel="noopener noreferrer"
         className="block border-2 border-gray-400 text-white rounded-full p-1 hover:bg-green-400 hover:text-gray-100 transition-colors duration-300 ease-in-out"
