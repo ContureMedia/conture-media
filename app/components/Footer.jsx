@@ -26,7 +26,7 @@ export default function Footer() {
             </p>
 
             <p className="font-semibold text-sm text-gray-400">
-              India +91 6377801694
+              India +91 7425081690
             </p>
           </div>
         </div>

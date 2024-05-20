@@ -212,7 +212,7 @@ const Contactform = () => {
                       <p className="mb-2 font-bold text-xs ">
                         USA +1 650 239 6404
                         <br />
-                        India +91 6377801694
+                        India +91 7425081690
                       </p>
                     </div>
                   </div>
