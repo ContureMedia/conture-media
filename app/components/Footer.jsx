@@ -14,21 +14,12 @@ export default function Footer() {
         {/* Left section */}
         <div className="flex items-center w-full sm:w-auto mb-8 sm:mb-0">
           <Image
-            width={90}
-            height={90}
+            width={200}
+            height={200}
             src="/logo.png"
             alt="Company Logo"
             className=""
           />
-          <div className="ml-4">
-            <p className="font-semibold text-sm my-2 text-gray-400">
-              USA +1 650 239 6404
-            </p>
-
-            <p className="font-semibold text-sm text-gray-400">
-              India +91 7425081690
-            </p>
-          </div>
         </div>
 
         {/* Middle section */}
@@ -91,14 +82,7 @@ export default function Footer() {
           >
             <FaLinkedin size={18} />
           </a>
-          <a
-            href="https://wa.me/+916378467482?text=I'm%20interested%20"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block  text-white p-1 transition-colors duration-300 ease-in-out"
-          >
-            <FaWhatsapp size={18} />
-          </a>
+
           <a
             href="https://www.instagram.com/conture_media"
             target="_blank"

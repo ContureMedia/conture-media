@@ -186,37 +186,6 @@ const Contactform = () => {
                     </div>
                   </div>
                 </div>
-
-                <div className="w-full shrink-0 grow-0 basis-auto md:w-6/12 md:px-3 lg:w-full lg:px-6 xl:mb-12 xl:w-6/12">
-                  <div className="align-start flex">
-                    <div className="shrink-0">
-                      <div className="inline-block rounded-md bg-pink-500 p-4 text-primary">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          strokeWidth="1.5"
-                          stroke="currentColor"
-                          className="w-6 h-6"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3"
-                          />
-                        </svg>
-                      </div>
-                    </div>
-                    <div className="ml-6 grow text-gray-300">
-                      <p className="mb-2 font-bold text-base ">Mobile</p>
-                      <p className="mb-2 font-bold text-xs ">
-                        USA +1 650 239 6404
-                        <br />
-                        India +91 7425081690
-                      </p>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>

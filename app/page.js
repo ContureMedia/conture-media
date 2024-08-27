@@ -11,6 +11,7 @@ import ImpactInMotion from "./components/ImpactInMotion";
 import StrategySessionIdealFor from "./components/IdealForItem";
 import MailSection from "./components/MailSection";
 import VideoReview from "./components/VideoReview";
+import { FeaturesSectionDemo } from "./components/Feature";
 
 export default function Home() {
   return (
@@ -23,17 +24,22 @@ export default function Home() {
         }}
       >
         <div className="w-full flex items-center justify-center flex-col ">
-          <h1 className=" text-center w-full capitalize flex-wrap text-4xl p-4  font-bold from-purple-600 via-pink-600 to-blue-600 bg-gradient-to-r bg-clip-text text-transparent">
+          <h1 className=" text-center w-full capitalize flex-wrap text-4xl p-2  font-bold from-purple-600 via-pink-600 to-blue-600 bg-gradient-to-r bg-clip-text text-transparent">
             What sets us apart?
           </h1>
-          <span className="text-gray-300 capitalize mx-auto md:my-4 my-2 text-xs md:text-base text-center relative z-10 leading-relaxed tracking-normal">
-            <p className="text-gray-300 capitalize mx-auto md:my-4 my-2 text-2xl  text-center relative z-10 leading-relaxed tracking-normal font-bold">
-              Our community at Conture Media.
+          <span className="text-gray-300 capitalize mx-auto  my-2  md:text-base text-center relative z-10 leading-relaxed tracking-normal">
+            <p className="text-gray-300 capitalize mx-auto  my-2 text-3xl  text-center relative z-10 leading-relaxed tracking-normal font-bold">
+              communities
             </p>{" "}
-            We prioritize building a family-first environment where you can
-            connect and collaborate with like-minded creators. Here, you&apos;re
-            encouraged to discuss trending topics and share insights, creating a
-            strong network of support and inspiration
+            <p className="text-sm">
+              {" "}
+              Conture Media sets itself apart by creating tailored communities
+              for each business or individual, where they can connect, share
+              insights, and receive feedback, fostering growth and
+              collaboration. Additionally, we boost sales through referral and
+              affiliate marketing programs, ensuring brands not only engage
+              meaningfully but also drive revenue and collective success.
+            </p>
           </span>
         </div>
         <div className=" w-full flex md:flex-row flex-col items-center justify-center ">
@@ -45,9 +51,7 @@ export default function Home() {
         <div className="overflow-hidden w-full items-center justify-center ">
           <BrandsThatChooseConture />
         </div>
-        <div className="overflow-hidden w-full flex flex-col items-center justify-center ">
-          <VideoReview />
-        </div>
+
         <div className="w-full flex items-center justify-center flex-col my-10 md:p-5">
           <h2 className="text-4xl text-center p-4  font-bold from-purple-600 via-pink-600 to-blue-600 bg-gradient-to-r bg-clip-text text-transparent">
             Vision and Purpose: Words from Our Founder
@@ -65,9 +69,15 @@ export default function Home() {
             into shared experiences.&quot; What do you really have, if not the
             stories shaped by your journey?
           </p>
+          <div className="overflow-hidden w-full flex flex-col items-center justify-center mt-16 md:mt-28">
+            <VideoReview />
+          </div>
         </div>
         <div className=" w-full flex md:flex-row flex-col items-center justify-center p-3">
-          <OurTeam />
+          <FeaturesSectionDemo />
+        </div>
+        <div className=" w-full flex md:flex-row flex-col items-center justify-center p-3">
+          {/* <OurTeam /> */}
         </div>
         <div className=" w-full flex md:flex-row flex-col items-center justify-center p-3">
           <StrategySessionIdealFor />
