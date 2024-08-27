@@ -46,7 +46,7 @@ const Navbar = () => {
           <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
             <div className="lg:block hidden">
               <a
-                href="https://wa.me/+916378467482?text=I'm%20interested%20"
+                href="mailto:Business@conturemedia.com?subject=I'm%20interested%20in%20your%20services&body=Hi%20Conture%20Media%2C%0A%0AI%20am%20interested%20in%20your%20services.%20Please%20contact%20me%20back."
                 target="_blank"
                 rel="noopener noreferrer"
               >

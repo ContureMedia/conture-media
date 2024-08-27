@@ -11,24 +11,13 @@ const VideoCard = () => {
       src: "/reviews/vid1.mp4",
       thumbnail: "/reviews/img1.jpeg",
       alt: "Video 1",
+      insta: "https://www.instagram.com/fyd_ritik/",
     },
     {
-      src: "https://victoryempire.co/assets/videos/video12.mp4?v=919e79fa",
-      thumbnail:
-        "https://victoryempire.co/assets/videos/video12.mp4.jpg?v=919e79fa",
+      src: "/reviews/vid2.mp4",
+      thumbnail: "/reviews/img2.jpeg",
       alt: "Video 2",
-    },
-    {
-      src: "https://victoryempire.co/assets/videos/video02.mp4?v=919e79fa",
-      thumbnail:
-        "https://victoryempire.co/assets/videos/video02.mp4.jpg?v=919e79fa",
-      alt: "Video 3",
-    },
-    {
-      src: "https://victoryempire.co/assets/videos/video06.mp4?v=919e79fa",
-      thumbnail:
-        "https://victoryempire.co/assets/videos/video06.mp4.jpg?v=919e79fa",
-      alt: "Video 4",
+      insta: "https://www.instagram.com/sanatanmusic_/",
     },
   ];
 
@@ -44,7 +33,7 @@ const VideoCard = () => {
           Trust, Authenticity, and Transparency
         </p>
       </h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         {videos.map((video, index) => (
           <div
             key={index}

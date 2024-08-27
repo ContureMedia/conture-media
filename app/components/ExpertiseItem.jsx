@@ -1,59 +1,28 @@
 "use client";
-import { useState, useEffect } from "react";
-
-function ExpertiseItem({ title }) {
-  const [color, setColor] = useState("#3b82f6");
-
-  useEffect(() => {
-    const colors = [
-      "#ef4444",
-      "#f59e0b",
-      "#10b981",
-      "#3b82f6",
-      "#6366f1",
-      "#8b5cf6",
-      "#ec4899",
-    ];
-    const interval = setInterval(() => {
-      const randomColor = colors[Math.floor(Math.random() * colors.length)];
-      setColor(randomColor);
-    }, 800);
-
-    return () => clearInterval(interval);
-  }, []);
-
-  return (
-    <div
-      style={{ borderColor: color }}
-      className="bg-gray-800 capitalize border p-4 rounded-lg shadow-lg font-bold text-white mb-4 text-left hover:shadow-2xl transition duration-300 ease-in-out transform hover:scale-105 hover:bg-white hover:text-black"
-    >
-      {title}
-    </div>
-  );
-}
+import { useId } from "react";
+import { FaArrowDown } from "react-icons/fa6";
 
 const ShortFormVideoEditing = () => {
   return (
     <div className=" py-12">
       <div className="container mx-auto">
         <h1 className="text-3xl font-semibold text-white mb-6 uppercase">
-          CONTENT AND COMMUNITY Driven
+          Why Content marketing and brand building is important?
         </h1>
         <p className="text-gray-400 mb-8 capitalize">
-          for creators, Entrepreneurs, Businesses, artists and the people who
-          want to change the world for better !!
+          The days when aggressive sales could push consumers into buying are
+          long gone. These days, people seek to connect with a brand on their
+          own terms and wishes. They want to learn about what you offer, what
+          your story is, compare it with other options, and do their own
+          research before making a decision.
         </p>
         <p className="text-gray-400 mb-3">
-          We specialize in one thing – helping creators produce exceptional
-          content with a community-focused approach. At Conture Media, we excel
-          in crafting strategies that not only stand out but also foster
-          collaboration and connections among creators.
+          It’s a more deliberate process. So, what should your business do?
+          Focus on earning their trust by delivering valuable content that
+          genuinely addresses their needs and solves their problems. That’s
+          where effective content marketing comes in.
         </p>
-        <p className="text-gray-400 mb-5">
-          If you seek a partner who zeroes in on creating impactful,
-          scroll-stopping content that captures attention in seconds and
-          delivers a clear ROI, you&apos;ve found the right place.
-        </p>
+        <p className="text-gray-400 mb-5">That is where we come in.</p>
         <button className="bg-[#ff1491c7] text-white px-4 py-2 rounded-lg hover:bg-[#FF1493]">
           <a href="https://calendly.com/auditmeet/30min?month=2024-03">
             Elevate Your Brand&apos;s Story
@@ -62,16 +31,27 @@ const ShortFormVideoEditing = () => {
         <p className="text-gray-400 mt-4">
           Schedule Your FREE Strategy Call Now
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-          <ExpertiseItem title="Business & Personal Branding" />
-          <ExpertiseItem title="Video Editing " />
-          <ExpertiseItem title="Paid Advertisments" />
-          <ExpertiseItem title="Content Strategy" />
-          <ExpertiseItem title="Social Media Management" />
-          <ExpertiseItem title="Branding for Entrepreneurs" />
-          <ExpertiseItem title="Media Production" />
-          <ExpertiseItem title="Animation and Graphic Design" />
-          <ExpertiseItem title="Digital Marketing" />
+        <div className="py-20 lg:pt-36">
+          <div className="text-2xl font-semibold text-white mb-6 uppercase flex items-center justify-start gap-1">
+            Expertised In
+            <FaArrowDown className="text-[#ff1491c7] animate-bounce" />
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 md:gap-5 max-w-7xl mx-auto">
+            {grid.map((feature) => (
+              <div
+                key={feature.title}
+                className="relative bg-gradient-to-b from-neutral-800 group to-neutral-950  p-6 rounded-3xl overflow-hidden hover:bg-gradient-to-b hover:from-neutral-200  hover:to-neutral-400 hover:scale-105 transition-all duration-300"
+              >
+                <Grid size={20} />
+                <p className="text-xl font-bold  text-white relative z-20 group-hover:text-black">
+                  {feature.title}
+                </p>
+                <p className="text-neutral-400 mt-4 text-sm font-normal relative z-20 group-hover:text-gray-800">
+                  {feature.description}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>
@@ -79,3 +59,86 @@ const ShortFormVideoEditing = () => {
 };
 
 export default ShortFormVideoEditing;
+
+const grid = [
+  {
+    title: "Business & Personal Branding",
+    description:
+      "We elevate your brand's identity, making it stand out and resonate with your target audience.",
+  },
+  {
+    title: "Paid Advertisement",
+    description:
+      "We design and execute targeted ad campaigns that drive real results and maximize your ROI.",
+  },
+  {
+    title: "Community Building & Management",
+    description:
+      "We cultivate and manage thriving communities that strengthen your brand’s connection with its audience.",
+  },
+];
+
+export const Grid = ({ pattern, size }) => {
+  const p = pattern ?? [
+    [Math.floor(Math.random() * 4) + 7, Math.floor(Math.random() * 6) + 1],
+    [Math.floor(Math.random() * 4) + 7, Math.floor(Math.random() * 6) + 1],
+    [Math.floor(Math.random() * 4) + 7, Math.floor(Math.random() * 6) + 1],
+    [Math.floor(Math.random() * 4) + 7, Math.floor(Math.random() * 6) + 1],
+    [Math.floor(Math.random() * 4) + 7, Math.floor(Math.random() * 6) + 1],
+  ];
+  return (
+    <div className="pointer-events-none absolute left-1/2 top-0  -ml-20 -mt-2 h-full w-full [mask-image:linear-gradient(white,transparent)]">
+      <div className="absolute inset-0 bg-gradient-to-r  [mask-image:radial-gradient(farthest-side_at_top,white,transparent)] from-zinc-900/30  to-zinc-900/30 opacity-100">
+        <GridPattern
+          width={size ?? 20}
+          height={size ?? 20}
+          x="-12"
+          y="4"
+          squares={p}
+          className="absolute inset-0 h-full w-full  mix-blend-overlay fill-white/10 stroke-white/10 "
+        />
+      </div>
+    </div>
+  );
+};
+
+export function GridPattern({ width, height, x, y, squares, ...props }) {
+  const patternId = useId();
+
+  return (
+    <svg aria-hidden="true" {...props}>
+      <defs>
+        <pattern
+          id={patternId}
+          width={width}
+          height={height}
+          patternUnits="userSpaceOnUse"
+          x={x}
+          y={y}
+        >
+          <path d={`M.5 ${height}V.5H${width}`} fill="none" />
+        </pattern>
+      </defs>
+      <rect
+        width="100%"
+        height="100%"
+        strokeWidth={0}
+        fill={`url(#${patternId})`}
+      />
+      {squares && (
+        <svg x={x} y={y} className="overflow-visible">
+          {squares.map(([x, y]) => (
+            <rect
+              strokeWidth="0"
+              key={`${x}-${y}`}
+              width={width + 1}
+              height={height + 1}
+              x={x * width}
+              y={y * height}
+            />
+          ))}
+        </svg>
+      )}
+    </svg>
+  );
+}
