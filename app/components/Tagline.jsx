@@ -31,7 +31,7 @@ const Democracy = () => {
               whileHover={{ scale: 1.1 }} // Hover effect: scale up
               aria-label={tagline.text} // Accessibility improvement
             >
-              "{tagline.text}"
+              &quot;{tagline.text}&quot;
             </motion.div>
           ))}
         </div>

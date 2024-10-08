@@ -44,7 +44,7 @@ const AdminDashboard = () => {
         >
           Image
         </label>
-        <ImageUpload setImage={setImage} />
+        <imgUpload setImage={setImage} />
         <label
           htmlFor="title"
           className="text-start w-full font-bold lg:text-4xl md:text-3xl sm:text-2xl text-xl mb-4"

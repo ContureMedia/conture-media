@@ -40,7 +40,7 @@ const Navbar = () => {
     >
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-          <Image src="/logolight.png" alt="Logo" width={120} height={120} />
+          <img src="/logolight.png" alt="Logo" width={120} height={120} />
         </Link>
         <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
           <div className="lg:block hidden">

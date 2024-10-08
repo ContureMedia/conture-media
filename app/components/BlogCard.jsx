@@ -5,7 +5,7 @@ import Button from "./Button";
 const BlogCard = ({ blog }) => {
   return (
     <div className="max-w-md mx-auto bg-gradient-to-r from-black via-gray-900 to-black rounded-xl shadow-lg overflow-hidden md:max-w-lg p-4 flex flex-col items-center text-white border-2 border-gray-600">
-      <Image
+      <img
         width={500}
         height={300}
         className="w-full object-cover rounded-t-xl"

@@ -2,6 +2,7 @@
 import { Client, Databases } from 'appwrite';
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const client = new Client();
 client

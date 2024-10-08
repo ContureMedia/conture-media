@@ -2,7 +2,7 @@
 import { Client, Databases, Query } from 'appwrite';
 import React from 'react';
 import { useEffect, useState } from 'react';
-
+import Image from 'next/image';
 
 
 const client = new Client();
@@ -11,7 +11,7 @@ client
   .setEndpoint('https://cloud.appwrite.io/v1')
   .setProject('6700d08b00249a10df53');
 
-const page = ({ params }) => {
+const Page = ({ params }) => {
   const slug = params.slug
   const [blog, setBlog] = useState([])
   useEffect(() => {
@@ -26,14 +26,14 @@ const page = ({ params }) => {
     });
   }, [])
 
-  const useDocumentTitle = (title) => {
+  const UseDocumentTitle = (title) => {
     useEffect(() => {
       document.title = title;
     }, [title]);
 
   };
 
-  useDocumentTitle(blog.pagetitle);
+  UseDocumentTitle(blog.pagetitle);
 
   return (
     
@@ -102,4 +102,4 @@ const page = ({ params }) => {
   )
 }
 
-export default page
+export default Page

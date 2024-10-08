@@ -4,8 +4,7 @@ import Button from "./Button";
 import React from "react";
 import { motion } from "framer-motion";
 import Democracy from "./Tagline";
-
-
+<time datetime="2016-10-25" suppressHydrationWarning />
 const logos = [
   "/logolight.png",
   "/1.png",
@@ -14,7 +13,7 @@ const logos = [
   "/4.png"
 ];
 
-const Hero = React.memo(() => {
+const Hero = () => {
   return (    
     
     <div className="h-auto w-full bg-black relative flex flex-col items-center justify-center antialiased p-5">
@@ -53,17 +52,15 @@ const Hero = React.memo(() => {
         {/* Right Side: Image */}
         
         <div className="flex justify-center items-center mt-5 lg:mt-0 lg:ml-5 flex-shrink-0">
-          <imgs className="">
+        <imgs className="">
           <motion.img
             initial={{opacity:0,y:-100}}
             animate={{opacity:1,y:0}}
-            transition={{duration:1,type:"spring"}}
+            transition={{duration:1,type:"smooth"}}
             src="/image.jpg"
             className="h-80 w-auto"
           />    
           </imgs>
-                     
-                  
         </div>
 
 
@@ -104,6 +101,6 @@ const Hero = React.memo(() => {
       <BackgroundBeams />
     </div>
   );
-});
+};
 
 export default Hero;

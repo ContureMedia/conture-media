@@ -47,7 +47,7 @@ const VideoCard = () => {
             className="relative rounded-md overflow-hidden border-solid border-4 border-white  w-64 h-96"
           >
             {playingVideo !== video.src && (
-              <Image
+              <img
                 width={256}
                 height={144}
                 src={video.thumbnail}

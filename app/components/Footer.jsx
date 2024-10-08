@@ -13,7 +13,7 @@ export default function Footer() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap justify-between items-center">
         {/* Left section */}
         <div className="flex items-center w-full sm:w-auto mb-8 sm:mb-0">
-          <Image
+          <img
             width={200}
             height={200}
             src="/logo.png"

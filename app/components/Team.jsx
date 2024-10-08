@@ -3,7 +3,7 @@ import React from "react";
 
 const TeamMember = ({ name, title, image }) => (
   <div className="bg-gray-900 p-6 rounded-lg shadow-lg text-white hover:shadow-2xl transition duration-300 ease-in-out transform hover:scale-105">
-    <Image
+    <img
       width={400}
       height={300}
       src={"/" + encodeURIComponent(image.slice(1))}

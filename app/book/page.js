@@ -30,7 +30,7 @@ const EBook = () => {
       </p>
 
       <div className="flex flex-col md:flex-row items-center justify-evenly w-full">
-        <Image
+        <img
           width={500}
           height={500}
           src="/book.png"
