@@ -14,11 +14,18 @@ const VideoCard = () => {
       insta: "https://www.instagram.com/fyd_ritik/",
     },
     {
+      src: "/reviews/vid3.mp4",
+    thumbnail: "/reviews/img3.png",
+      alt: "Video 3",
+      
+    },
+    {
       src: "/reviews/vid2.mp4",
       thumbnail: "/reviews/img2.jpeg",
       alt: "Video 2",
       insta: "https://www.instagram.com/sanatanmusic_/",
-    },
+    }
+    
   ];
 
   const handlePlayVideo = (videoSrc) => {
@@ -33,11 +40,11 @@ const VideoCard = () => {
           Trust, Authenticity, and Transparency
         </p>
       </h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
         {videos.map((video, index) => (
           <div
             key={index}
-            className="relative rounded-md overflow-hidden border-4 border-gray-00  w-64 h-96"
+            className="relative rounded-md overflow-hidden border-solid border-4 border-white  w-64 h-96"
           >
             {playingVideo !== video.src && (
               <Image
@@ -48,6 +55,7 @@ const VideoCard = () => {
                 className="w-full h-full object-cover"
               />
             )}
+            
             {playingVideo === video.src ? (
               <video
                 src={video.src}

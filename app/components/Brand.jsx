@@ -17,7 +17,7 @@ const BrandsThatChooseConture = () => {
     },
     {
       name: "Cozy Corners Bookshop",
-      des: "What I love about Conture  Media is how they make everything so easy. Their content feels fresh, and it’s really helped us build a strong, engaged community.",
+      des: "What I love about Conture Media is how they make everything so easy. Their content feels fresh, and it’s really helped us build a strong, engaged community.",
     },
     {
       name: "Lush Canvas Home Décor",
@@ -36,6 +36,7 @@ const BrandsThatChooseConture = () => {
       des: "I can’t say enough good things about Conture Media. They’ve helped us build a loyal following through content that feels genuine and really connects with people.",
     },
   ];
+
   const creator = [
     {
       name: "Olivia Harper",
@@ -69,15 +70,16 @@ const BrandsThatChooseConture = () => {
 
   return (
     <div className="py-12">
-      <h2 className=" md:text-2xl font-bold mb-4 text-center md:text-left">
+      <h2 className="md:text-2xl font-bold mb-4 text-center md:text-left">
         Brands And Creators That Choose Conture
       </h2>
-      <div className=" rounded-md flex flex-col antialiased  items-center justify-center relative ">
-        <h1 className="text-4xl font-bold mb-4 text-center text-white">
+      <div className="rounded-md flex flex-col antialiased items-center justify-center relative">
+        {/* Updated 'Brands' and 'Creators' headings with button colors */}
+        <h1 className="text-4xl font-bold mb-4 text-center text-blue-500 hover:text-blue-600 transition-all duration-200">
           Brands
         </h1>
         <Moving items={brands} direction="right" speed="slow" />
-        <h1 className="text-4xl font-bold my-4 text-center text-white">
+        <h1 className="text-4xl font-bold my-4 text-center text-blue-500 hover:text-blue-600 transition-all duration-200">
           Creators
         </h1>
         <Moving items={creator} direction="left" speed="slow" />

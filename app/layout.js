@@ -78,6 +78,11 @@ export const metadata = {
     cardType: "summary_large_image",
   },
 };
+export const NoNavbarLayout = ({ children }) => {
+  return <div>{children}</div>;
+};
+
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
@@ -90,3 +95,4 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
+

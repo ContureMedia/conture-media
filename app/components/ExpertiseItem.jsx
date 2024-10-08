@@ -1,29 +1,50 @@
 "use client";
 import { useId } from "react";
 import { FaArrowDown } from "react-icons/fa6";
+import { motion } from "framer-motion";
 
 const ShortFormVideoEditing = () => {
   return (
     <div className=" py-12">
       <div className="container mx-auto">
-        <h1 className="text-3xl font-semibold text-white mb-6 uppercase">
+        <motion.h1
+          initial={{ opacity: 0, y: -60 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ amount: 1 }}
+          transition={{ duration: 1 }}
+          className="text-3xl font-semibold text-white mb-6 uppercase">
           Why Content marketing and brand building is important?
-        </h1>
-        <p className="text-gray-400 mb-8 capitalize">
+        </motion.h1>
+        <motion.p
+          initial={{ opacity: 0, x: -60 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ amount: 0.5 }}
+          transition={{ duration: 1 }}
+          className="text-gray-400 mb-8 capitalize">
           The days when aggressive sales could push consumers into buying are
           long gone. These days, people seek to connect with a brand on their
           own terms and wishes. They want to learn about what you offer, what
           your story is, compare it with other options, and do their own
           research before making a decision.
-        </p>
-        <p className="text-gray-400 mb-3">
+        </motion.p>
+        <motion.p
+          initial={{ opacity: 0, x: -60 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ amount: 0.5 }}
+          transition={{ duration: 1 }}
+          className="text-gray-400 mb-3">
           It’s a more deliberate process. So, what should your business do?
           Focus on earning their trust by delivering valuable content that
           genuinely addresses their needs and solves their problems. That’s
           where effective content marketing comes in.
-        </p>
-        <p className="text-gray-400 mb-5">That is where we come in.</p>
-        <button className="bg-[#ff1491c7] text-white px-4 py-2 rounded-lg hover:bg-[#FF1493]">
+        </motion.p>
+        <motion.p
+          initial={{ opacity: 0, x: -60 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ amount: 0.5 }}
+          transition={{ duration: 1 }}
+          className="text-gray-400 mb-5">That is where we come in.</motion.p>
+        <button className="bg-[#04387d] text-white px-4 py-2 rounded-lg hover:bg-blue-800">
           <a href="https://calendly.com/auditmeet/30min?month=2024-03">
             Elevate Your Brand&apos;s Story
           </a>
@@ -34,7 +55,7 @@ const ShortFormVideoEditing = () => {
         <div className="py-20 lg:pt-36">
           <div className="text-2xl font-semibold text-white mb-6 uppercase flex items-center justify-start gap-1">
             Expertised In
-            <FaArrowDown className="text-[#ff1491c7] animate-bounce" />
+            <FaArrowDown className="text-[#04387d] animate-bounce" />
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 md:gap-5 max-w-7xl mx-auto">
             {grid.map((feature) => (

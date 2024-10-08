@@ -1,97 +1,109 @@
+"use client";
 import { BackgroundBeams } from "@/components/ui/background-beams";
-import Image from "next/image";
 import Button from "./Button";
-import { ImCross } from "react-icons/im";
+import React from "react";
+import { motion } from "framer-motion";
+import Democracy from "./Tagline";
 
-const Hero = () => {
-  return (
-    <div className="h-auto  w-full bg-black relative flex flex-col lg:flex-row items-center justify-center antialiased p-5">
-      <div className="mx-auto md:p-4 my-5 md:mt-5 flex-1 flex flex-col  items-center justify-center">
-        <h1 className="relative z-10 uppercase bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text font-sans font-bold text-2xl lg:text-3xl text-center">
-          &quot; Sales, Rebooted!&quot; <br /> Ditch the Old School Sales
-          Tactics, <br /> <p className="text-base">Let&apos;s Get Modern!</p>
-        </h1>
-        <p className="text-gray-300 capitalize mx-auto md:my-4 my-2 text-xs md:text-base text-center relative z-10 leading-relaxed tracking-normal">
-          Are you tired of playing the sales game with outdated rules? You know,
-          the ones that involve spamming, cold calling, and praying for a
-          conversion?
-          <br />
-          <br />
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-2 mt-5">
-          {/* first */}
-          <div className="text-white w-full items-center justify-start text-sm">
-            <span className="text-sm font-bold tracking-tighter my-1">
-              No more:
-            </span>
-            <li className="flex items-center justify-start gap-3 w-full">
-              <ImCross className="text-[#FF1493]  text-sm" />
-              Spamming people with generic emails
-            </li>
-            <li className="flex items-center justify-start gap-3 w-full">
-              <ImCross className="text-[#FF1493]  text-sm" />
-              Cold calling strangers who don&apos;t care
-            </li>
-            <li className="flex items-center justify-start gap-3 w-full">
-              <ImCross className="text-[#FF1493]  text-sm" />
-              Using cheesy sales pitches that fall flat
-            </li>
-            <li className="flex items-center justify-center gap-3 w-full">
-              <ImCross className="text-[#FF1493]  text-sm" /> Focusing on
-              short-term gains instead of long-term relationships
-            </li>
-          </div>
-          {/* second */}
-          <div className="text-white w-full items-center justify-start text-sm">
-            <span className="text-sm font-bold tracking-tighter my-1">
-              We&apos;re About Building a Sales Revolution!
-            </span>
-            <li className="flex items-center justify-start gap-3 w-full">
-              <span className="text-green-500 text-xl font-semibold">✓</span>
-              Creating a loyal community that loves your brand
-            </li>
-            <li className="flex items-center justify-start gap-3 w-full">
-              <span className="text-green-500 text-xl font-semibold">✓</span>
-              Using paid advertising to target your dream customers
-            </li>
-            <li className="flex items-center justify-start gap-3 w-full">
-              <span className="text-green-500 text-xl font-semibold">✓</span>
-              Crafting personalized experiences that make people go{" "}
-              &quot;wow!&quot;
-            </li>
-            <li className="flex items-center justify-start gap-3 w-full">
-              <span className="text-green-500 text-xl font-semibold">✓</span>{" "}
-              Building relationships that last longer than a sales cycle
-            </li>
-          </div>
-        </div>
 
-        <div className="mt-10">
-          {" "}
-          <Button text={"Discover The Conture Difference"} />
-        </div>
-        <p className="text-gray-300 capitalize mx-auto  my-4 md:my-7 text-xs  text-center relative z-10 leading-relaxed tracking-normal">
-          Let&apos;s work together to shake up your brand and make it more
-          human, more fun, and more effective. Ready to get started?
-        </p>
-      </div>
+const logos = [
+  "/logolight.png",
+  "/1.png",
+  "/2.png",
+  "/3.png",
+  "/4.png"
+];
 
-      <div className=" flex items-center justify-center p-5 md:p-10 ">
-        <Image
-          src={"/img.gif"}
-          alt="music"
-          width={500}
-          height={500}
-          className="md:border-4 border-gray-600 rounded-2xl"
-          style={{
-            boxShadow:
-              "rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px",
+const Hero = React.memo(() => {
+  return (    
+    
+    <div className="h-auto w-full bg-black relative flex flex-col items-center justify-center antialiased p-5">
+      {/* Main Content Wrapper */}
+      <div className="flex flex-col lg:flex-row items-center justify-between w-full lg:w-4/5 mx-auto my-5">
+        
+        {/* Left Side: Text Content */}
+        <div className="text-center lg:text-left flex-1">
+          {/* Guarantee Text */}
+          <motion.h1 
+          initial={{opacity:0,x:-50}}
+          animate={{opacity:1,x:0}}
+          transition={{duration:1.4,type:"spring"}}
+          className="relative z-10 uppercase bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text font-sans font-bold text-2xl lg:text-5xl">
+            &quot;Sales, Rebooted!&quot;
+            <br /> Ditch the Old School Sales Tactics, <br />
+
+            
+          </motion.h1>
+
+          {/* Subheading */}
+          <motion.p
+          initial={{opacity:0,x:50}}
+          animate={{opacity:1, x: 0 }} 
+          transition={{
+            ease: "linear",
+            duration: 2,
+            x: { duration: 1 }
           }}
-        />
+          className="text-white font-semibold mx-auto mb-5 text-base lg:text-lg">
+            <br />Are you tired of playing the sales game with outdated rules? 
+            <br />You know, the ones that involve spamming, cold calling, and praying for a conversion?
+          </motion.p>
+        </div>
+
+        {/* Right Side: Image */}
+        
+        <div className="flex justify-center items-center mt-5 lg:mt-0 lg:ml-5 flex-shrink-0">
+          <imgs className="">
+          <motion.img
+            initial={{opacity:0,y:-100}}
+            animate={{opacity:1,y:0}}
+            transition={{duration:1,type:"spring"}}
+            src="/image.jpg"
+            className="h-80 w-auto"
+          />    
+          </imgs>
+                     
+                  
+        </div>
+
+
       </div>
+      
+      {/* Clients Section */}
+      <h1 className="text-white mx-auto my-4 mt-10 text-2xl font-bold italic lg:text-lg">Our clients:</h1>
+      
+      {/* Animated Brand Logo Scroller */}
+      <div className="w-full my-6 overflow-hidden">
+        <div className="flex justify-between items-center animate-scroll infinite">
+          {logos.map((logo, index) => (
+            <img
+              key={index}
+              src={logo}
+              alt={`Brand logo ${index + 1}`}
+              className="h-16 mx-3"
+            />
+          ))}
+        </div>
+      </div>
+          <div className="my-10">
+            <Democracy/>
+          </div>
+      
+
+
+      {/* CTA Button */}
+      <div className="my-5">
+        <a href="https://google.com">
+       <Button          
+          text="GET STARTED"
+          className="mt-4 bg-gradient-to-r from-pink-500 to-blue-800 text-white px-6 py-3 rounded-full text-2 font-semibold shadow-lg"
+        />
+        </a>
+      </div>
+
       <BackgroundBeams />
     </div>
   );
-};
+});
 
 export default Hero;

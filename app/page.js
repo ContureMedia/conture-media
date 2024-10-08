@@ -12,6 +12,7 @@ import StrategySessionIdealFor from "./components/IdealForItem";
 import MailSection from "./components/MailSection";
 import VideoReview from "./components/VideoReview";
 import { FeaturesSectionDemo } from "./components/Feature";
+import SloganList from "./components/Approach";
 
 export default function Home() {
   return (
@@ -24,7 +25,7 @@ export default function Home() {
         }}
       >
         <div className="w-full flex items-center justify-center flex-col ">
-          <h1 className=" text-center w-full capitalize flex-wrap text-4xl p-2  font-bold from-purple-600 via-pink-600 to-blue-600 bg-gradient-to-r bg-clip-text text-transparent">
+          <h1 className=" text-center w-full capitalize flex-wrap text-4xl p-2  font-bold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500  bg-clip-text text-transparent">
             What sets us apart?
           </h1>
           <span className="text-gray-300 capitalize mx-auto  my-2  md:text-base text-center relative z-10 leading-relaxed tracking-normal">
@@ -41,6 +42,9 @@ export default function Home() {
               meaningfully but also drive revenue and collective success.
             </p>
           </span>
+        </div>
+        <div className=" w-full flex md:flex-row flex-col items-center justify-center ">
+          <SloganList/>
         </div>
         <div className=" w-full flex md:flex-row flex-col items-center justify-center ">
           <ImpactInMotion />
@@ -76,9 +80,9 @@ export default function Home() {
         <div className=" w-full flex md:flex-row flex-col items-center justify-center p-3">
           <FeaturesSectionDemo />
         </div>
-        <div className=" w-full flex md:flex-row flex-col items-center justify-center p-3">
-          {/* <OurTeam /> */}
-        </div>
+        {/* <div className=" w-full flex md:flex-row flex-col items-center justify-center p-3">
+          <Steps/>
+        </div> */}
         <div className=" w-full flex md:flex-row flex-col items-center justify-center p-3">
           <StrategySessionIdealFor />
         </div>
