@@ -27,15 +27,15 @@ export const metadata = {
   ],
   openGraph: {
     title:
-      "Conture Media - Premium Content Creation, Video Editing & Marketing",
+      "Conture Media - The Future of Content Marketing: Community and Connection",
     description:
-      "Elevate your brand with Conture Medias expert content creation, video production, marketing services & community engagement. Crafted by industry leaders for unparalleled quality and results.",
+      "As the digital landscape evolves, the future of content marketing lies in building communities and fostering connections. Discover trends and insights into how brands are creating value through interactive and authentic content that encourages participation, engagement, and long-term loyalty.",
     images: [
       {
         url: "https://www.conturemedia.com/opengraph-image.png",
         width: 1200,
         height: 630,
-        alt: "Conture Media - Premium Content Creation, Video Editing & Marketing",
+        alt: "Conture Media - The Future of Content Marketing: Community and Connection",
       },
     ],
     locale: "en_US",
@@ -83,10 +83,6 @@ export const metadata = {
     cardType: "summary_large_image",
   },
 };
-export const NoNavbarLayout = ({ children }) => {
-  return <div>{children}</div>;
-};
-
 
 export default function RootLayout({ children }) {
   return (
