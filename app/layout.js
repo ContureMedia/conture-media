@@ -7,18 +7,23 @@ import SocialLinks from "./components/SocialLinks";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Conture Media - Premium Content Creation, Video Editing & Marketing",
+  title: "Conture Media - The Future of Content Marketing: Community and Connection",
   description:
-    "Elevate your brand with Conture Medias expert content creation, video production, marketing services & community engagement. Crafted by industry leaders for unparalleled quality and results.",
+    "As the digital landscape evolves, the future of content marketing lies in building communities and fostering connections. Discover trends and insights into how brands are creating value through interactive and authentic content that encourages participation, engagement, and long-term loyalty.",
   keywords: [
     "Conture Media",
     "Content Creation",
     "Video Editing",
     "Marketing",
+    "Future of content marketing",
     "Digital Marketing",
     "Social Media Marketing",
     "Community",
     "New York",
+    "Community engagement",
+    "Content marketing trends",
+    "building connections",
+    "interactive content"
   ],
   openGraph: {
     title:

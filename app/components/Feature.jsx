@@ -67,7 +67,7 @@ export function FeaturesSectionDemo() {
       {/* Centered Button */}
       <div className="flex justify-center mb-10">
         <a href="/price">
-          <button className="bg-[#FF1493] text-white px-6 py-3 rounded-full font-bold hover:bg-[#ff1491c7] transition duration-300">
+          <button className="bg-[#5f67dac7] text-white px-6 py-3 rounded-full font-bold hover:bg-[#191c46c7] transition duration-300">
             Check Our Pricing
           </button>
         </a>
@@ -97,10 +97,10 @@ const Feature = ({ title, description, icon, index }) => {
       )}
     >
       {index < 4 && (
-        <div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-t from-pink-500 to-transparent pointer-events-none" />
+        <div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-t from-blue-950 to-transparent pointer-events-none" />
       )}
       {index >= 4 && (
-        <div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-b from-pink-500 to-transparent pointer-events-none" />
+        <div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-b from-blue-950 to-transparent pointer-events-none" />
       )}
       <div className="mb-4 relative z-10 px-10 text-neutral-200 text-xl">
         {icon}
