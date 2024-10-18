@@ -13,7 +13,7 @@ export default function Footer() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap justify-between items-center">
         {/* Left section */}
         <div className="flex items-center w-full sm:w-auto mb-8 sm:mb-0">
-          <img
+          <Image
             width={200}
             height={200}
             src="/logo.png"
@@ -54,7 +54,12 @@ export default function Footer() {
           <p className="font-semibold text-sm text-gray-400 my-2">
             Book Your Session With Conture
           </p>
-          <a href="https://calendly.com/auditmeet/30min?month=2024-03">
+          <a
+            href="https://calendly.com/auditmeet/30min?month=2024-03"
+            className="bg-white text-black p-2 rounded-full"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Button variant="default" text="Book Session" className="w-full" />
           </a>
         </div>
