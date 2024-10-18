@@ -26,6 +26,10 @@ const nextConfig = {
         protocol: "https",
         hostname: "victoryempire.co",
       },
+      {
+        protocol: "https",
+        hostname: "akm-img-a-in.tosshub.com",
+      },
     ],
   },
 };
