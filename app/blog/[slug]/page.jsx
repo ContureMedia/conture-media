@@ -66,7 +66,7 @@ const Page = ({ params }) => {
             />
           </a>
           <a
-            href="https://www.linkedin.com"
+            href="https://www.linkedin.com/company/conture-media/"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center w-12 h-12 rounded-full hover:bg-gray-400 transition duration-300"
