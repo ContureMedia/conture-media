@@ -4,7 +4,6 @@ import Hero from "./components/Hero";
 import Button from "./components/Button";
 import { FaArrowRightLong } from "react-icons/fa6";
 import Mail from "./components/Mail";
-import OurTeam from "./components/Team";
 import BrandsThatChooseConture from "./components/Brand";
 import ShortFormVideoEditing from "./components/ExpertiseItem";
 import ImpactInMotion from "./components/ImpactInMotion";
@@ -13,6 +12,7 @@ import MailSection from "./components/MailSection";
 import VideoReview from "./components/VideoReview";
 import { FeaturesSectionDemo } from "./components/Feature";
 import SloganList from "./components/Approach";
+import { TimelineComp } from "./components/Timeline";
 
 export default function Home() {
   return (
@@ -44,13 +44,16 @@ export default function Home() {
           </span>
         </div>
         <div className=" w-full flex md:flex-row flex-col items-center justify-center ">
-          <SloganList/>
+          <SloganList />
         </div>
         <div className=" w-full flex md:flex-row flex-col items-center justify-center ">
           <ImpactInMotion />
         </div>
         <div className=" w-full flex md:flex-row flex-col items-center justify-center ">
           <ShortFormVideoEditing />
+        </div>
+        <div className=" w-full flex md:flex-row flex-col items-center justify-center ">
+          <TimelineComp />
         </div>
         <div className="overflow-hidden w-full items-center justify-center ">
           <BrandsThatChooseConture />
