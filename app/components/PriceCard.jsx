@@ -58,35 +58,47 @@ const PriceCard = () => {
               Personal & Business Branding
             </h2>
             <p className="text-center text-sm mb-4">
-              Find Your Brand&apos;s Voice
+            Consultation call
             </p>
             <p className="flex items-center justify-start text-sm gap-2">
               <IoMdArrowDropright fontSize={19} className="text-green-500" />
-              Discover your brand&apos;s purpose and passion
+              Brand’s purpose and passion
             </p>
             <p className="flex items-center justify-start text-sm gap-2">
               <IoMdArrowDropright fontSize={19} className="text-green-500" />
-              Custom brand style guide
+              Strategy Development
             </p>
             <p className="flex items-center justify-start text-sm gap-2">
               <IoMdArrowDropright fontSize={19} className="text-green-500" />
-              Brand storytelling and messaging
+              Platforms Management
             </p>
             <p className="flex items-center justify-start text-sm gap-2">
               <IoMdArrowDropright fontSize={19} className="text-green-500" />
-              Ongoing brand support
+              Graphic Designed Posts 
             </p>
             <p className="flex items-center justify-start text-sm gap-2">
               <IoMdArrowDropright fontSize={19} className="text-green-500" />
-              Standout brand positioning
+              Detailed And Extensive Content
             </p>
             <p className="flex items-center justify-start text-sm gap-2">
               <IoMdArrowDropright fontSize={19} className="text-green-500" />
-              Professional brand assets
+              Content Calendar
             </p>
             <p className="flex items-center justify-start text-sm gap-2">
               <IoMdArrowDropright fontSize={19} className="text-green-500" />
-              Consistent brand application
+              Comments on platforms for engaging 
+            </p>
+            <p className="flex items-center justify-start text-sm gap-2">
+              <IoMdArrowDropright fontSize={19} className="text-green-500" />
+              Structured & Engaging Community
+            </p>
+            <p className="flex items-center justify-start text-sm gap-2">
+              <IoMdArrowDropright fontSize={19} className="text-green-500" />
+              Management - Engaging users, Community Moderation and Crisis Management
+            </p>
+            <p className="flex items-center justify-start text-sm gap-2">
+              <IoMdArrowDropright fontSize={19} className="text-green-500" />
+              Brand support and positioning.
             </p>
             <a href="https://calendly.com/auditmeet/30min?month=2024-03">
               <div className="flex items-center justify-center mt-auto">

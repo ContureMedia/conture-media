@@ -18,7 +18,7 @@ const Contactform = () => {
   if (showSuccess) {
     return (
       <div className="w-full mx-auto flex items-center justify-center p-2">
-        <div className="bg-pink-100 border border-pink-400 text-pink-700 px-4 py-3 rounded ">
+        <div className="bg-blue-100 border border-blue-400 text-blue-700 px-4 py-3 rounded">
           <strong className="font-bold">Success!</strong>
           <span className="block sm:inline">
             Your message has been sent successfully.
@@ -31,7 +31,7 @@ const Contactform = () => {
     <section>
       <div
         id="map"
-        className=" h-[350px] overflow-hidden bg-cover bg-[50%] bg-no-repeat"
+        className="h-[350px] overflow-hidden bg-cover bg-[50%] bg-no-repeat"
       >
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60924485.415671155!2d54.55272035376464!3d21.250260899922907!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3663f18a24cbe857%3A0xa9416bfcd3a0f459!2sAsia!5e0!3m2!1sen!2sin!4v1710246311482!5m2!1sen!2sin"
@@ -44,70 +44,67 @@ const Contactform = () => {
         />
       </div>
       <div className="container px-6 md:px-10">
-        <div className="block rounded-lg bg-gray-950  px-6 py-12 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]  md:py-16 md:px-12 -mt-[90px] backdrop-blur-[30px]  border-gray-500  border">
+        <div className="block rounded-lg bg-gray-950 px-6 py-12 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] md:py-16 md:px-12 -mt-[90px] backdrop-blur-[30px] border-gray-500 border">
           <div className="flex flex-wrap">
             <div className="mb-12 w-full shrink-0 grow-0 basis-auto md:px-3 lg:mb-0 lg:w-5/12 lg:px-6">
               <form onSubmit={handleSubmit}>
-                <div className=" mb-6">
+                <div className="mb-6">
                   <label
-                    className="pointer-events-none   mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-gray-300 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none "
+                    className="text-gray-300"
                     htmlFor="exampleInput90"
                   >
                     Name
                   </label>
                   <input
-                    className="peer block min-h-[auto] w-full rounded border bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none "
+                    className="block w-full rounded border bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear"
                     id="exampleInput90"
                     type="text"
                     name="name"
                     placeholder="Name"
                     required
                   />
-
                   <ValidationError
                     prefix="name"
                     field="name"
                     errors={state.errors}
                   />
                 </div>
-                <div className=" mb-6">
+                <div className="mb-6">
                   <label
-                    className="pointer-events-none   mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-gray-300 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none "
+                    className="text-gray-300"
                     htmlFor="exampleInput91"
                   >
                     Email address
                   </label>
                   <input
-                    className="peer block min-h-[auto] w-full rounded border bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none "
+                    className="block w-full rounded border bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear"
                     id="exampleInput91"
                     type="email"
                     name="email"
                     placeholder="Email"
                     required
                   />
-
                   <ValidationError
                     prefix="email"
                     field="email"
                     errors={state.errors}
                   />
                 </div>
-                <div className=" mb-6">
+                <div className="mb-6">
                   <label
+                    className="text-gray-300"
                     htmlFor="exampleFormControlTextarea1"
-                    className="pointer-events-none   mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-gray-300 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none "
                   >
                     Message
                   </label>
                   <textarea
-                    className="peer block min-h-[auto] w-full rounded border bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none resize-none"
+                    className="block w-full rounded border bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear resize-none"
                     id="exampleFormControlTextarea1"
                     rows={4}
                     name="message"
                     placeholder="Message"
                     required
                   />
-
                   <ValidationError
                     prefix="message"
                     field="message"
@@ -117,7 +114,7 @@ const Contactform = () => {
 
                 <button
                   type="submit"
-                  className="w-full bg-pink-600  text-white  py-3 rounded-md hover:bg-pink-500 transition-all duration-200 ease-linear focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-neutral-100 focus:ring-opacity-50"
+                  className="w-full bg-blue-600 text-white py-3 rounded-md hover:bg-blue-500 transition-all duration-200 ease-linear focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                 >
                   Send Message
                 </button>
@@ -128,7 +125,7 @@ const Contactform = () => {
                 <div className="mb-12 w-full shrink-0 grow-0 basis-auto md:w-6/12 md:px-3 lg:w-full lg:px-6 xl:w-6/12">
                   <div className="flex items-start">
                     <div className="shrink-0">
-                      <div className="inline-block rounded-md bg-pink-500 p-4 text-primary">
+                      <div className="inline-block rounded-md bg-blue-500 p-4 text-white">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
@@ -150,8 +147,6 @@ const Contactform = () => {
                         Technical support
                       </p>
                       <p className="text-sm ">
-                        Business@conturemedia.com
-                        <br />
                         contureai1@gmail.com
                       </p>
                     </div>
@@ -159,8 +154,8 @@ const Contactform = () => {
                 </div>
                 <div className="mb-12 w-full shrink-0 grow-0 basis-auto md:w-6/12 md:px-3 lg:w-full lg:px-6 xl:w-6/12">
                   <div className="flex items-start">
-                    <div className="srink-0">
-                      <div className="inline-block rounded-md bg-pink-500 p-4 text-primary">
+                    <div className="shrink-0">
+                      <div className="inline-block rounded-md bg-blue-500 p-4 text-white">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
@@ -172,20 +167,79 @@ const Contactform = () => {
                           <path
                             strokeLinecap="round"
                             strokeLinejoin="round"
-                            d="M15 9h3.75M15 12h3.75M15 15h3.75M4.5 19.5h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5zm6-10.125a1.875 1.875 0 11-3.75 0 1.875 1.875 0 013.75 0zm1.294 6.336a6.721 6.721 0 01-3.17.789 6.721 6.721 0 01-3.168-.789 3.376 3.376 0 016.338 0z"
+                            d="M15 9h3.75M15 12h3.75M15 15h3.75M4.5 19.5h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5zm6-10.125a1.875 1.875 0 11-3.75 0 1.875 1.875 0 013.75 0zm1.294 6.336a6.721 6.721 0 00-7.588 0 .751.751 0 00-.331.623v.491a.75.75 0 00.75.75h6.75a.75.75 0 00.75-.75v-.491a.75.75 0 00-.331-.623z"
                           />
                         </svg>
                       </div>
                     </div>
                     <div className="ml-6 grow text-gray-300">
-                      <p className="mb-2 font-bold text-base ">Location</p>
+                      <p className="mb-2 font-bold text-base ">Sales inquiries</p>
                       <p className="text-sm">
-                        Global Service Provider Available to Everyone in the
-                        world.
+                        contact@conturemedia.com
                       </p>
                     </div>
                   </div>
                 </div>
+               {/*  <div className="mb-12 w-full shrink-0 grow-0 basis-auto md:w-6/12 md:px-3 lg:w-full lg:px-6 xl:w-6/12">
+                  <div className="flex items-start">
+                    <div className="shrink-0">
+                      <div className="inline-block rounded-md bg-blue-500 p-4 text-white">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          strokeWidth={2}
+                          stroke="currentColor"
+                          className="w-7 h-7"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="M3.75 5.25h16.5M9 3.75h6M12 8.25v9m-6.75 1.5h13.5c.621 0 1.125-.504 1.125-1.125V9.75A1.125 1.125 0 0018.75 8.625h-13.5A1.125 1.125 0 004.125 9.75v7.875c0 .621.504 1.125 1.125 1.125z"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <div className="ml-6 grow text-gray-300">
+                      <p className="mb-2 font-bold text-base ">Billing Support</p>
+                      <p className="text-sm">
+                        support@conturemedia.com
+                        <br />
+                        billing.contureai@gmail.com
+                      </p>
+                    </div> 
+                  </div>
+                </div>*/}
+                {/* <div className="mb-12 w-full shrink-0 grow-0 basis-auto md:w-6/12 md:px-3 lg:w-full lg:px-6 xl:w-6/12"> 
+                  <div className="flex items-start">
+                    <div className="shrink-0">
+                      <div className="inline-block rounded-md bg-blue-500 p-4 text-white">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          strokeWidth={2}
+                          stroke="currentColor"
+                          className="w-7 h-7"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="M15.75 8.25v3.75H12m0 0V15m0-3.75H8.25M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                     <div className="ml-6 grow text-gray-300">
+                      <p className="mb-2 font-bold text-base ">Others</p>
+                      <p className="text-sm">
+                        info@conturemedia.com
+                        <br />
+                        support.contureai@gmail.com
+                      </p>
+                    </div> 
+                  </div>
+                </div>*/}
               </div>
             </div>
           </div>
@@ -194,4 +248,5 @@ const Contactform = () => {
     </section>
   );
 };
+
 export default Contactform;

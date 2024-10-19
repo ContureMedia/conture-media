@@ -60,7 +60,7 @@ export default function Home() {
         </div>
 
         <div className="w-full flex items-center justify-center flex-col my-10 md:p-5">
-          <h2 className="text-4xl text-center p-4  font-bold from-purple-600 via-pink-600 to-blue-600 bg-gradient-to-r bg-clip-text text-transparent">
+          <h2 className="text-4xl text-center p-4  font-bold from-blue-400 via-blue-600 to-green-600 bg-gradient-to-r bg-clip-text text-transparent">
             Vision and Purpose: Words from Our Founder
           </h2>
           <p className="text-center  tracking-wide my-1 text-sm ">

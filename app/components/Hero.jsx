@@ -75,14 +75,47 @@ const Hero = () => {
       </h1>
 
       {/* Animated Brand Logo Scroller */}
-      <div className="w-full my-6 overflow-hidden">
-        <div className="flex justify-between items-center animate-scroll infinite">
+      <div className="w-full overflow-hidden py-5">
+        <div className="flex space-x-24 animate-scroll">
+          {/* Loop logos */}
           {logos.map((logo, index) => (
             <img
               key={index}
               src={logo}
               alt={`Brand logo ${index + 1}`}
-              className="h-16 mx-14 w-auto mb-5 "
+              className="h-16 w-auto"
+            />
+          ))}
+           {logos.map((logo, index) => (
+            <img
+              key={`duplicate-1-${index}`}
+              src={logo}
+              alt={`Duplicate logo ${index + 1}`}
+              className="h-16 w-auto"
+            />
+          ))}
+          {logos.map((logo, index) => (
+            <img
+              key={`duplicate-1-${index}`}
+              src={logo}
+              alt={`Duplicate logo ${index + 1}`}
+              className="h-16 w-auto"
+            />
+          ))}
+          {logos.map((logo, index) => (
+            <img
+              key={`duplicate-1-${index}`}
+              src={logo}
+              alt={`Duplicate logo ${index + 1}`}
+              className="h-16 w-auto"
+            />
+          ))}
+          {logos.map((logo, index) => (
+            <img
+              key={`duplicate-1-${index}`}
+              src={logo}
+              alt={`Duplicate logo ${index + 1}`}
+              className="h-16 w-auto"
             />
           ))}
         </div>
