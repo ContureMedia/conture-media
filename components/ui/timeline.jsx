@@ -36,7 +36,7 @@ export function Timeline({ data, showDescriptionOnHover = false }) {
   return (
     <div className="w-full font-sans overflow-hidden" ref={containerRef}>
       <div className="max-w-7xl mx-auto py-10 px-4 md:px-8 lg:px-10">
-        <h2 className="text-2xl md:text-4xl mb-4 text-white max-w-4xl font-bold">
+        <h2 className="text-4xl md:text-5xl mb-4 text-white max-w-4xl font-bold">
           Our Process
         </h2>
         <p className="text-neutral-300 text-sm md:text-base max-w-sm">
@@ -48,7 +48,7 @@ export function Timeline({ data, showDescriptionOnHover = false }) {
         {data.map((item, index) => (
           <div
             key={index}
-            className={`flex flex-col md:flex-row md:justify-between items-center pt-10 md:pt-20`}
+            className={`flex flex-col md:flex-row md:justify-between items-center pt-10 `}
           >
             <div
               className={`w-full md:w-[calc(50%-2.5rem)] px-4 md:px-0 ${
@@ -58,9 +58,9 @@ export function Timeline({ data, showDescriptionOnHover = false }) {
               <motion.div
                 whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
                 whileTap={{ scale: 0.98 }}
-                className="bg-neutral-900 p-6 rounded-lg shadow-lg border border-purple-500/20 hover:border-purple-500/50 transition-all duration-300 z-10 relative"
+                className="bg-neutral-900 p-10 rounded-lg shadow-lg border border-blue-500/20 hover:border-blue-500/50 transition-all duration-300 z-10 relative"
               >
-                <h3 className="text-xl md:text-2xl font-bold text-white mb-4">
+                <h3 className="text-5xl md:text-6xl font-bold text-blue-400 mb-4">
                   {item.title}
                 </h3>
                 <AnimatePresence>
@@ -82,7 +82,7 @@ export function Timeline({ data, showDescriptionOnHover = false }) {
             </div>
             <div className="relative w-full md:w-auto md:order-2 flex justify-center md:opacity-0">
               <div className="w-10 h-10 bg-neutral-700 rounded-full flex items-center justify-center z-20 my-4 md:my-0 md:mx-4">
-                <div className="w-6 h-6 bg-purple-500 rounded-full" />
+                <div className="w-6 h-6 bg-blue-500 rounded-full" />
               </div>
             </div>
           </div>
@@ -92,7 +92,7 @@ export function Timeline({ data, showDescriptionOnHover = false }) {
             height: heightTransform,
             opacity: opacityTransform,
           }}
-          className="absolute left-1/2 top-0 w-[4px] bg-gradient-to-b from-purple-500 via-blue-500 to-transparent transform -translate-x-1/2 z-0"
+          className="absolute left-1/2 top-0 w-[6px] bg-gradient-to-b from-blue-500 via-blue-500 to-transparent transform -translate-x-1/2 z-0"
         />
       </div>
     </div>
