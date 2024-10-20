@@ -30,6 +30,10 @@ const nextConfig = {
         protocol: "https",
         hostname: "akm-img-a-in.tosshub.com",
       },
+      {
+        protocol: "https",
+        hostname: "www.rollingstone.com",
+      },
     ],
   },
 };

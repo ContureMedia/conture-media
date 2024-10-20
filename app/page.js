@@ -12,7 +12,7 @@ import MailSection from "./components/MailSection";
 import VideoReview from "./components/VideoReview";
 import { FeaturesSectionDemo } from "./components/Feature";
 import SloganList from "./components/Approach";
-import { TimelineComp } from "./components/Timeline";
+import Timeline from "./components/Timeline";
 
 export default function Home() {
   return (
@@ -53,7 +53,7 @@ export default function Home() {
           <ShortFormVideoEditing />
         </div>
         <div className=" w-full flex md:flex-row flex-col items-center justify-center ">
-          <TimelineComp />
+          <Timeline />
         </div>
         <div className="overflow-hidden w-full items-center justify-center ">
           <BrandsThatChooseConture />
