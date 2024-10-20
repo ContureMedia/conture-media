@@ -1,4 +1,3 @@
-// components/SloganList.js
 import React from 'react';
 
 const slogans = [
@@ -13,14 +12,26 @@ const SloganList = () => {
       <h1 className="text-4xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-blue-300 to-blue-500">
         Our Approach
       </h1>
-      <div className="grid grid-rows-3 gap-1 md:grid-rows-3 rounded-full relative h-full">
+
+      {/* Main grid for different screen sizes */}
+      <div className="grid gap-4 md:grid-rows-3 lg:grid-rows-3">
         {slogans.map((slogan, index) => (
           <div
             key={index}
-            className={`bg-inherit p-8 rounded-lg shadow-lg grid grid-cols-2 grid-flow-row text-gray-500 ${slogan.hoverColor} transform transition-transform duration-300 hover:scale-105`}
+            className={`bg-inherit p-6 rounded-lg shadow-lg text-gray-500 ${slogan.hoverColor} transform transition-transform duration-300 hover:scale-105 lg:mr-20 lg:ml-20`}
           >
-            <h2 className="text-6xl font-medium text-center mb-4">{slogan.title}</h2>
-            <p className="text-center mt-3 text-3xl row-span-1 font-mono hidden md:block">&quot;{slogan.text}&quot;</p> {/* Hide on mobile */}
+            {/* Layout for mobile: stacked, for large screen: side by side */}
+            <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
+              {/* Title */}
+              <h2 className="text-6xl font-medium text-center lg:text-left mb-4 lg:mb-0">
+                {slogan.title}
+              </h2>
+
+              {/* Text: Below title on mobile, side by side on larger screens */}
+              <p className="text-center lg:text-left text-3xl font-mono mt-2 lg:mt-0 lg:ml-2">
+                &quot;{slogan.text}&quot;
+              </p>
+            </div>
           </div>
         ))}
       </div>
