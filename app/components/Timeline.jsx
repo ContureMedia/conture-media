@@ -1,4 +1,5 @@
 import { Timeline } from "@/components/ui/timeline";
+import React from "react";
 
 export function TimelineComp() {
   const data = [
@@ -102,7 +103,7 @@ export function TimelineComp() {
   ];
 
   return (
-    <div className="w-full ">
+    <div className="w-full">
       <Timeline data={data} showDescriptionOnHover={false} />
     </div>
   );
