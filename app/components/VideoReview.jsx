@@ -1,147 +1,80 @@
 "use client";
+import Image from "next/image";
 import React, { useState } from "react";
-
-// Sample video data
-const videoData = [
-  { id: 1, src: "/reviews/vid1.mp4", title: "Video 1" },
-  { id: 2, src: "/reviews/vid2.mp4", title: "Video 2" },
-  { id: 3, src: "/reviews/vid3.mp4", title: "Video 3" },
-];
+import { FaPlay } from "react-icons/fa";
 
 const VideoCard = () => {
-  const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
+  const [playingVideo, setPlayingVideo] = useState(null);
 
-  // Function to move to the next video
-  const nextVideo = () => {
-    setCurrentVideoIndex((prevIndex) => (prevIndex + 1) % videoData.length);
-  };
+  const videos = [
+    {
+      src: "/reviews/vid1.mp4",
+      thumbnail: "/reviews/img1.jpeg",
+      alt: "Video 1",
+      insta: "https://www.instagram.com/fyd_ritik/",
+    },
+    {
+      src: "/reviews/vid3.mp4",
+    thumbnail: "/reviews/img3.png",
+      alt: "Video 3",
+      
+    },
+    {
+      src: "/reviews/vid2.mp4",
+      thumbnail: "/reviews/img2.jpeg",
+      alt: "Video 2",
+      insta: "https://www.instagram.com/sanatanmusic_/",
+    }
+    
+  ];
 
-  // Function to move to the previous video
-  const prevVideo = () => {
-    setCurrentVideoIndex((prevIndex) =>
-      prevIndex === 0 ? videoData.length - 1 : prevIndex - 1
-    );
+  const handlePlayVideo = (videoSrc) => {
+    setPlayingVideo(videoSrc);
   };
 
   return (
-    <div
-      style={{
-        width: "100%",
-        height: "100%",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        position: "relative",
-      }}
-    >
-      <div
-        style={{
-          width: "300px",
-          height: "600px",
-          position: "relative",
-          perspective: "1000px",
-        }}
-      >
-        {/* Increased width and height */}
-        {videoData.map(({ id, src }, index) => {
-          // Calculate the position of each video based on its index
-          const isCurrent = index === currentVideoIndex;
-          const isPrev =
-            index ===
-            (currentVideoIndex === 0
-              ? videoData.length - 1
-              : currentVideoIndex - 1);
-          const isNext = index === (currentVideoIndex + 1) % videoData.length;
-
-          // Set the style for current, previous, and next videos
-          const style = isCurrent
-            ? {
-                transform: "translateZ(0) scale(1)",
-                zIndex: 2,
-                opacity: 1,
-              }
-            : isPrev
-            ? {
-                transform:
-                  "translateZ(-300px) translateX(-200px) rotateY(15deg) scale(0.8)", // Adjusted translateX for new size
-                zIndex: 1,
-                opacity: 0.7,
-              }
-            : isNext
-            ? {
-                transform:
-                  "translateZ(-300px) translateX(200px) rotateY(-15deg) scale(0.8)", // Adjusted translateX for new size
-                zIndex: 1,
-                opacity: 0.7,
-              }
-            : {
-                opacity: 0,
-                zIndex: 0,
-              };
-
-          return (
-            <div
-              key={id}
-              style={{
-                position: "absolute",
-                top: 0,
-                left: 0,
-                width: "100%",
-                height: "100%",
-                transition: "transform 0.5s ease, opacity 0.5s ease",
-                ...style,
-              }}
-            >
+    <>
+      <h1 className="flex flex-col text-center justify-center items-center text-xl md:text-[26px] font-bold my-5 text-white capitalize gap-2">
+        Dive into our video reviews to experience{" "}
+        <p className="font-bold from-blue-600 via-green-500 to-indigo-400 bg-gradient-to-r bg-clip-text text-transparent">
+          Trust, Authenticity, and Transparency
+        </p>
+      </h1>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+        {videos.map((video, index) => (
+          <div
+            key={index}
+            className="relative rounded-md overflow-hidden border-solid border-4 border-white  w-64 h-96"
+          >
+            {playingVideo !== video.src && (
+              <img
+                width={256}
+                height={144}
+                src={video.thumbnail}
+                alt={video.alt}
+                className="w-full h-full object-cover"
+              />
+            )}
+            
+            {playingVideo === video.src ? (
               <video
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  borderRadius: "10px",
-                  boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
-                }}
-                src={src}
+                src={video.src}
+                autoPlay
+                className="w-full h-full object-cover"
                 controls
               />
-            </div>
-          );
-        })}
+            ) : (
+              <button
+                onClick={() => handlePlayVideo(video.src)}
+                className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white bg-black rounded-full p-3"
+              >
+                <FaPlay className="h-6 w-6" />
+              </button>
+            )}
+          </div>
+        ))}
       </div>
-
-      {/* Replace 'Prev' and 'Next' with '<' and '>' */}
-      <button
-        onClick={prevVideo}
-        style={{
-          position: "absolute",
-          left: "20px",
-          fontSize: "30px",
-          padding: "10px",
-          backgroundColor: "transparent", // Optional: make button transparent for a cleaner look
-          color: "#007bff",
-          border: "none",
-          cursor: "pointer",
-          boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
-        }}
-      >
-        {"<"}
-      </button>
-
-      <button
-        onClick={nextVideo}
-        style={{
-          position: "absolute",
-          right: "20px",
-          fontSize: "30px",
-          padding: "10px",
-          backgroundColor: "transparent", // Optional: make button transparent for a cleaner look
-          color: "#007bff",
-          border: "none",
-          cursor: "pointer",
-          boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
-        }}
-      >
-        {">"}
-      </button>
-    </div>
+    </>
   );
 };
 
