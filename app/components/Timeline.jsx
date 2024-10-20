@@ -137,17 +137,21 @@ export default function Timeline() {
           {timelineData.map((item, index) => (
             <div
               key={item.key}
-              className="w-full flex flex-col md:flex-row items-center mb-12 md:mb-24 z-10 "
+              className="w-full flex flex-col md:flex-row items-center mb-12 md:mb-24 z-10"
             >
               <div className="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center z-10 mb-4 md:mb-0 md:sticky md:top-1/2 md:transform md:-translate-y-1/2 md:left-1/2 md:-ml-6">
                 <div className="h-4 w-4 rounded-full bg-blue-500" />
               </div>
               <div
-                className={`w-full md:w-5/12  ${
+                className={`w-full md:w-5/12 ${
                   index % 2 === 0 ? "md:mr-auto md:pr-8" : "md:ml-auto md:pl-8"
                 } relative`}
               >
-                <div className="bg-neutral-900 rounded-lg shadow-md px-10 py-10 md:py-12">
+                <div
+                  className="bg-neutral-900 rounded-lg shadow-md px-10 py-10 md:py-12 border border-blue-500 
+                  hover:shadow-sky-500/50   transition duration-300 ease-in-out 
+                "
+                >
                   <AnimatedText
                     text={item.title}
                     className="text-5xl text-blue-500 font-bold mb-2 inline-block"
