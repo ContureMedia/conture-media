@@ -1,10 +1,22 @@
 // components/SloganList.js
-import React from 'react';
+import React from "react";
 
 const slogans = [
-  { title: 'DARE', text: 'Dare to Innovate', hoverColor: 'hover:text-pink-400' },
-  { title: 'CARE', text: 'Care in every Detail', hoverColor: 'hover:text-blue-400' },
-  { title: 'SHARE', text: 'Share the Vision', hoverColor: 'hover:text-green-400' },
+  {
+    title: "DARE",
+    text: "Dare to Innovate",
+    hoverColor: "hover:text-pink-400",
+  },
+  {
+    title: "CARE",
+    text: "Care in every Detail",
+    hoverColor: "hover:text-blue-400",
+  },
+  {
+    title: "SHARE",
+    text: "Share the Vision",
+    hoverColor: "hover:text-green-400",
+  },
 ];
 
 const SloganList = () => {
@@ -19,8 +31,13 @@ const SloganList = () => {
             key={index}
             className={`bg-inherit p-8 rounded-lg shadow-lg grid grid-cols-2 grid-flow-row text-gray-500 ${slogan.hoverColor} transform transition-transform duration-300 hover:scale-105`}
           >
-            <h2 className="text-6xl font-medium text-center mb-4">{slogan.title}</h2>
-            <p className="text-center mt-3 text-3xl row-span-1 font-mono hidden md:block">&quot;{slogan.text}&quot;</p> {/* Hide on mobile */}
+            <h2 className="text-6xl font-medium text-center mb-4">
+              {slogan.title}
+            </h2>
+            <p className="text-center mt-3 text-3xl row-span-1 font-mono hidden md:block">
+              &quot;{slogan.text}&quot;
+            </p>{" "}
+            {/* Hide on mobile */}
           </div>
         ))}
       </div>
