@@ -15,17 +15,15 @@ const VideoCard = () => {
     },
     {
       src: "/reviews/vid3.mp4",
-    thumbnail: "/reviews/img3.png",
+      thumbnail: "/reviews/img3.png",
       alt: "Video 3",
-      
     },
     {
       src: "/reviews/vid2.mp4",
       thumbnail: "/reviews/img2.jpeg",
       alt: "Video 2",
       insta: "https://www.instagram.com/sanatanmusic_/",
-    }
-    
+    },
   ];
 
   const handlePlayVideo = (videoSrc) => {
@@ -55,7 +53,7 @@ const VideoCard = () => {
                 className="w-full h-full object-cover"
               />
             )}
-            
+
             {playingVideo === video.src ? (
               <video
                 src={video.src}
