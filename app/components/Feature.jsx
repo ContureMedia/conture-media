@@ -16,49 +16,49 @@ export function FeaturesSectionDemo() {
       title: "Straight-Up Honesty",
       description:
         "We don't do secrets. At Conture Media, you get the whole truth, no hidden tricks—just clear, honest vibes all the way.",
-      icon: <FaRegHandshake className="w-6 h-6 text-indigo-500" />,
+      icon: <FaRegHandshake className="w-10 h-10 text-blue-500" />,
     },
     {
       title: "Feedback-Fueled Magic",
       description:
         "Your thoughts are our secret sauce. We build awesome communities where your feedback is like rocket fuel for our growth. Tell us what's up, and we'll turn it into something amazing.",
-      icon: <FaComments className="w-6 h-6 text-indigo-500" />,
+      icon: <FaComments className="w-10 h-10 text-blue-500" />,
     },
     {
       title: "Results That Pop",
       description:
         "We don't just talk the talk. We deliver real results that make a splash and get you noticed. We're here to make things happen, no fluff.",
-      icon: <FaChartLine className="w-6 h-6 text-indigo-500" />,
+      icon: <FaChartLine className="w-10 h-10 text-blue-500" />,
     },
     {
       title: "Digital Identity Superheroes",
       description:
         "We're your brand's digital superheroes. We create online identities that stand out and get people talking. Think of us as your brand's personal hype squad.",
-      icon: <FaUserAstronaut className="w-6 h-6 text-indigo-500" />,
+      icon: <FaUserAstronaut className="w-10 h-10 text-blue-500" />,
     },
     {
       title: "Fresh and Funky Strategies",
       description:
         "We're always thinking outside the box. Our strategies are like a breath of fresh air—new, exciting, and guaranteed to keep your brand on its toes.",
-      icon: <FaLightbulb className="w-6 h-6 text-indigo-500" />,
+      icon: <FaLightbulb className="w-10 h-10 text-blue-500" />,
     },
     {
       title: "Custom Fit Just for You",
       description:
         "Your brand is unique, and so are our solutions. We don't do generic; we craft strategies that are as one-of-a-kind as you are.",
-      icon: <FaPuzzlePiece className="w-6 h-6 text-indigo-500" />,
+      icon: <FaPuzzlePiece className="w-10 h-10 text-blue-500" />,
     },
     {
       title: "Always Here for You",
       description:
         "We're not just a service; we're your go-to sidekicks. Whether you need a hand or a high-five, we're here for you, ready to support you every step of the way.",
-      icon: <FaHeadset className="w-6 h-6 text-indigo-500" />,
+      icon: <FaHeadset className="w-10 h-10 text-blue-500" />,
     },
     {
       title: "Impact That Rocks",
       description:
         "We focus on making a real difference. Our goal is to deliver results that not only impress but actually move your business forward in a big way.",
-      icon: <FaRocket className="w-6 h-6 text-indigo-500" />,
+      icon: <FaRocket className="w-10 h-10 text-blue-500" />,
     },
   ];
 
