@@ -1,10 +1,10 @@
 "use client";
+
+import React, { useRef, useEffect, useState } from "react";
 import { BackgroundBeams } from "@/components/ui/background-beams";
-import Button from "./Button";
-import React from "react";
 import { motion } from "framer-motion";
 import Democracy from "./Tagline";
-<time datetime="2016-10-25" suppressHydrationWarning />;
+
 const logos = [
   "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/512px-Telegram_logo.svg.png?20220101141644",
   "https://cdn.iconscout.com/icon/free/png-512/free-tik-tok-logo-icon-download-in-svg-png-gif-file-formats--technology-brand-social-media-company-logos-pack-icons-6297327.png?f=webp&w=256",
@@ -16,6 +16,60 @@ const logos = [
   "https://www.freepnglogos.com/uploads/fedex-logo-png/fedex-emblem-delivery-business-logo-2.png",
   "https://www.freepnglogos.com/uploads/logo-chatgpt-png/logo-chatgpt-png-transparent-background-2.png",
 ];
+
+function InfiniteImageCarousel({ images }) {
+  const containerRef = useRef(null);
+  const [translateX, setTranslateX] = useState(0);
+
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+
+    const totalWidth = container.scrollWidth;
+    const viewportWidth = container.offsetWidth;
+
+    let animationFrameId;
+
+    const animate = () => {
+      setTranslateX((prevTranslateX) => {
+        const newTranslateX = prevTranslateX - 1;
+        if (-newTranslateX >= totalWidth / 2) {
+          // Reset to start when half of the images have scrolled
+          return 0;
+        }
+        return newTranslateX;
+      });
+      animationFrameId = requestAnimationFrame(animate);
+    };
+
+    animationFrameId = requestAnimationFrame(animate);
+
+    return () => {
+      cancelAnimationFrame(animationFrameId);
+    };
+  }, []);
+
+  return (
+    <div className="w-full overflow-hidden bg-transparent">
+      <div className="relative h-20 sm:h-24 md:h-28 lg:h-32">
+        <div
+          ref={containerRef}
+          className="absolute flex"
+          style={{ transform: `translateX(${translateX}px)` }}
+        >
+          {[...images, ...images].map((src, index) => (
+            <img
+              key={index}
+              src={src}
+              alt={`Brand logo ${index + 1}`}
+              className="h-16 sm:h-20  w-auto mx-8 sm:mx-10 md:mx-12 lg:mx-14 object-contain"
+            />
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
 
 const Hero = () => {
   return (
@@ -55,17 +109,15 @@ const Hero = () => {
         </div>
 
         {/* Right Side: Image */}
-
         <div className="flex justify-center items-center mt-5 lg:mt-0 lg:ml-5 flex-shrink-0">
-          <imgs className="">
-            <motion.img
-              initial={{ opacity: 0, y: -100 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, type: "smooth" }}
-              src="/image.jpg"
-              className="h-80 w-auto"
-            />
-          </imgs>
+          <motion.img
+            initial={{ opacity: 0, y: -100 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, type: "smooth" }}
+            src="/image.jpg"
+            alt="Hero image"
+            className="h-80 w-auto"
+          />
         </div>
       </div>
 
@@ -74,60 +126,18 @@ const Hero = () => {
         Our clients:
       </h1>
 
-      {/* Animated Brand Logo Scroller */}
-      <div className="w-full overflow-hidden py-5">
-        <div className="flex space-x-24 animate-scroll">
-          {/* Loop logos */}
-          {logos.map((logo, index) => (
-            <img
-              key={index}
-              src={logo}
-              alt={`Brand logo ${index + 1}`}
-              className="h-16 w-auto"
-            />
-          ))}
-           {logos.map((logo, index) => (
-            <img
-              key={`duplicate-1-${index}`}
-              src={logo}
-              alt={`Duplicate logo ${index + 1}`}
-              className="h-16 w-auto"
-            />
-          ))}
-          {logos.map((logo, index) => (
-            <img
-              key={`duplicate-1-${index}`}
-              src={logo}
-              alt={`Duplicate logo ${index + 1}`}
-              className="h-16 w-auto"
-            />
-          ))}
-          {logos.map((logo, index) => (
-            <img
-              key={`duplicate-1-${index}`}
-              src={logo}
-              alt={`Duplicate logo ${index + 1}`}
-              className="h-16 w-auto"
-            />
-          ))}
-          {logos.map((logo, index) => (
-            <img
-              key={`duplicate-1-${index}`}
-              src={logo}
-              alt={`Duplicate logo ${index + 1}`}
-              className="h-16 w-auto"
-            />
-          ))}
-        </div>
-      </div>
-      <div className="my-20">
-        <Democracy />
+      {/* Infinite Image Carousel */}
+      <div className="w-full my-6 overflow-hidden">
+        <InfiniteImageCarousel images={logos} />
       </div>
 
+      <div className="my-10">
+        <Democracy />
+      </div>
 
       <BackgroundBeams />
     </div>
   );
 };
 
-export default React.memo(Hero);
+export default Hero;

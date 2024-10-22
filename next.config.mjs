@@ -1,7 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['www.rollingstone.com'],
     remotePatterns: [
       {
         protocol: "https",
@@ -30,6 +29,10 @@ const nextConfig = {
       {
         protocol: "https",
         hostname: "akm-img-a-in.tosshub.com",
+      },
+      {
+        protocol: "https",
+        hostname: "www.rollingstone.com",
       },
     ],
   },

@@ -3,7 +3,9 @@
 import { Client, Databases, Query } from "appwrite";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
+import { FaInstagram, FaLinkedinIn, FaCalendar } from "react-icons/fa";
+import {FaXTwitter, FaEnvelope } from "react-icons/fa6";
+
 
 const client = new Client();
 
@@ -64,20 +66,21 @@ export default function Page({ params }) {
           />
           <div className="flex justify-center space-x-4 mb-8">
             <a
-              href="https://www.facebook.com"
+              href="https://www.instagram.com/conture_media?igsh=bXNlNDNoZGF1Y3ly"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-blue-600 p-2 rounded-full hover:bg-blue-700 transition duration-300"
             >
-              <FaFacebookF className="w-6 h-6" />
+              <FaInstagram className="w-6 h-6" />
             </a>
+            
             <a
-              href="https://www.twitter.com"
+              href="https://calendly.com/auditmeet/30min?month=2024-03"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-blue-400 p-2 rounded-full hover:bg-blue-500 transition duration-300"
+              className="bg-blue-500 p-2 rounded-full hover:bg-blue-600 transition duration-300"
             >
-              <FaTwitter className="w-6 h-6" />
+              <FaCalendar className="w-6 h-6" />
             </a>
             <a
               href="https://www.linkedin.com/company/conture-media/"
@@ -86,6 +89,22 @@ export default function Page({ params }) {
               className="bg-blue-800 p-2 rounded-full hover:bg-blue-900 transition duration-300"
             >
               <FaLinkedinIn className="w-6 h-6" />
+            </a>
+            <a
+              href="https://x.com/ContureAI?t=tnB3NGnJ6-La503JvfRAGg&s=08"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-blue-600 p-2 rounded-full hover:bg-blue-700 transition duration-300"
+            >
+              <FaXTwitter className="w-6 h-6" />
+            </a>
+            <a
+              href="mailto:Business@conturemedia.com?subject=I'm%20interested%20in%20your%20services&body=Hi%20Conture%20Media%2C%0A%0AI%20am%20interested%20in%20your%20services.%20Please%20contact%20me%20back."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-blue-600 p-2 rounded-full hover:bg-blue-700 transition duration-300"
+            >
+              <FaEnvelope className="w-6 h-6" />
             </a>
           </div>
           <article className="prose prose-invert lg:prose-xl max-w-none">
