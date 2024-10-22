@@ -131,7 +131,7 @@ const Hero = () => {
         <InfiniteImageCarousel images={logos} />
       </div>
 
-      <div className="my-10">
+      <div className="mt-10 mb-2">
         <Democracy />
       </div>
 

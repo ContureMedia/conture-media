@@ -30,7 +30,7 @@ export default function Home() {
               href="mailto:Business@conturemedia.com?subject=I'm%20interested%20in%20your%20services&body=Hello,%20I%20am%20interested%20in%20your%20services.%20Please%20contact%20me%20back."
               target="_self"  // Optionally, try target="_self" instead of "_blank"
             >
-              <button className="mt-4 bg-blue-500 text-white px-6 py-3 rounded-full text-2 font-semibold shadow-lg transform transition-transform duration-300 hover:scale-105 hover:bg-blue-800">
+              <button className="my-7 bg-blue-500 text-white px-6 py-3 rounded-full text-5 font-semibold shadow-lg transform transition-transform duration-300 hover:scale-105 hover:bg-blue-800">
                 GET STARTED
               </button>
             </a>
