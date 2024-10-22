@@ -120,23 +120,14 @@ const Hero = () => {
           ))}
         </div>
       </div>
-      <div className="my-10">
+      <div className="my-20">
         <Democracy />
       </div>
 
-      {/* CTA Button */}
-      <div className="my-5">
-        <a href="https://google.com">
-          <Button
-            text="GET STARTED"
-            className="mt-4 bg-gradient-to-r from-pink-500 to-blue-800 text-white px-6 py-3 rounded-full text-2 font-semibold shadow-lg"
-          />
-        </a>
-      </div>
 
       <BackgroundBeams />
     </div>
   );
 };
 
-export default Hero;
+export default React.memo(Hero);

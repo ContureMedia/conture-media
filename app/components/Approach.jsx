@@ -21,7 +21,7 @@ const SloganList = () => {
             className={`bg-inherit p-6 rounded-lg shadow-lg text-gray-500 ${slogan.hoverColor} transform transition-transform duration-300 hover:scale-105 lg:mr-20 lg:ml-20`}
           >
             {/* Layout for mobile: stacked, for large screen: side by side */}
-            <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
+            <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between lg:ml-20 lg:mr-20">
               {/* Title */}
               <h2 className="text-6xl font-medium text-center lg:text-left mb-4 lg:mb-0">
                 {slogan.title}

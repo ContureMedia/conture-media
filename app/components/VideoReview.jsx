@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 
 // Sample video data
 const videoData = [
@@ -10,6 +10,8 @@ const videoData = [
 
 const VideoCard = () => {
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
+  const videoRefs = useRef([]); // To store references to each video element
+  const [activeVideoId, setActiveVideoId] = useState(null);
 
   // Function to move to the next video
   const nextVideo = () => {
@@ -21,6 +23,18 @@ const VideoCard = () => {
     setCurrentVideoIndex((prevIndex) =>
       prevIndex === 0 ? videoData.length - 1 : prevIndex - 1
     );
+  };
+
+  // Function to handle when a video starts playing
+  const handlePlay = (id) => {
+    if (activeVideoId !== id) {
+      // Pause the currently active video
+      if (activeVideoId !== null && videoRefs.current[activeVideoId]) {
+        videoRefs.current[activeVideoId].pause();
+      }
+      // Set the new active video
+      setActiveVideoId(id);
+    }
   };
 
   return (
@@ -42,7 +56,6 @@ const VideoCard = () => {
           perspective: "1000px",
         }}
       >
-        {/* Increased width and height */}
         {videoData.map(({ id, src }, index) => {
           // Calculate the position of each video based on its index
           const isCurrent = index === currentVideoIndex;
@@ -93,6 +106,7 @@ const VideoCard = () => {
               }}
             >
               <video
+                ref={(el) => (videoRefs.current[id] = el)} // Store the reference to this video
                 style={{
                   width: "100%",
                   height: "100%",
@@ -101,21 +115,22 @@ const VideoCard = () => {
                 }}
                 src={src}
                 controls
+                onPlay={() => handlePlay(id)} // Call handlePlay when the video starts playing
               />
             </div>
           );
         })}
       </div>
 
-      {/* Replace 'Prev' and 'Next' with '<' and '>' */}
+      {/* Adjusted the positions of the buttons to move them even closer to the video */}
       <button
         onClick={prevVideo}
         style={{
           position: "absolute",
-          left: "20px",
+          left: "20%", // Moved closer to the video
           fontSize: "30px",
           padding: "10px",
-          backgroundColor: "transparent", // Optional: make button transparent for a cleaner look
+          backgroundColor: "transparent",
           color: "#007bff",
           border: "none",
           cursor: "pointer",
@@ -129,10 +144,10 @@ const VideoCard = () => {
         onClick={nextVideo}
         style={{
           position: "absolute",
-          right: "20px",
+          right: "20%", // Moved closer to the video
           fontSize: "30px",
           padding: "10px",
-          backgroundColor: "transparent", // Optional: make button transparent for a cleaner look
+          backgroundColor: "transparent",
           color: "#007bff",
           border: "none",
           cursor: "pointer",

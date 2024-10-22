@@ -31,7 +31,7 @@ const Contactform = () => {
     <section>
       <div
         id="map"
-        className="h-[350px] overflow-hidden bg-cover bg-[50%] bg-no-repeat"
+        className="h-[350px] overflow-hidden bg-cover bg-[50%] bg-no-repeat lg:ml-10 lg:mr-10"
       >
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60924485.415671155!2d54.55272035376464!3d21.250260899922907!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3663f18a24cbe857%3A0xa9416bfcd3a0f459!2sAsia!5e0!3m2!1sen!2sin!4v1710246311482!5m2!1sen!2sin"
@@ -147,7 +147,7 @@ const Contactform = () => {
                         Technical support
                       </p>
                       <p className="text-sm ">
-                        contureai1@gmail.com
+                        business@conturemedia.com
                       </p>
                     </div>
                   </div>
@@ -155,7 +155,7 @@ const Contactform = () => {
                 <div className="mb-12 w-full shrink-0 grow-0 basis-auto md:w-6/12 md:px-3 lg:w-full lg:px-6 xl:w-6/12">
                   <div className="flex items-start">
                     <div className="shrink-0">
-                      <div className="inline-block rounded-md bg-blue-500 p-4 text-white">
+                      <div className="inline-block rounded-md bg-blue-500 p-4 text-white lg:ml-10">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
@@ -173,9 +173,9 @@ const Contactform = () => {
                       </div>
                     </div>
                     <div className="ml-6 grow text-gray-300">
-                      <p className="mb-2 font-bold text-base ">Sales inquiries</p>
+                      <p className="mb-2 font-bold text-base ">Location</p>
                       <p className="text-sm">
-                        contact@conturemedia.com
+                        Global Service Provider
                       </p>
                     </div>
                   </div>

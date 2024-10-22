@@ -16,49 +16,49 @@ export function FeaturesSectionDemo() {
       title: "Straight-Up Honesty",
       description:
         "We don't do secrets. At Conture Media, you get the whole truth, no hidden tricks—just clear, honest vibes all the way.",
-      icon: <FaRegHandshake className="w-6 h-6 text-indigo-500" />,
+      icon: <FaRegHandshake className="w-6 h-6 text-blue-500" />, // Changed color to blue
     },
     {
       title: "Feedback-Fueled Magic",
       description:
         "Your thoughts are our secret sauce. We build awesome communities where your feedback is like rocket fuel for our growth. Tell us what's up, and we'll turn it into something amazing.",
-      icon: <FaComments className="w-6 h-6 text-indigo-500" />,
+      icon: <FaComments className="w-6 h-6 text-blue-500" />, // Changed color to blue
     },
     {
       title: "Results That Pop",
       description:
         "We don't just talk the talk. We deliver real results that make a splash and get you noticed. We're here to make things happen, no fluff.",
-      icon: <FaChartLine className="w-6 h-6 text-indigo-500" />,
+      icon: <FaChartLine className="w-6 h-6 text-blue-500" />, // Changed color to blue
     },
     {
       title: "Digital Identity Superheroes",
       description:
         "We're your brand's digital superheroes. We create online identities that stand out and get people talking. Think of us as your brand's personal hype squad.",
-      icon: <FaUserAstronaut className="w-6 h-6 text-indigo-500" />,
+      icon: <FaUserAstronaut className="w-6 h-6 text-blue-500" />, // Changed color to blue
     },
     {
       title: "Fresh and Funky Strategies",
       description:
         "We're always thinking outside the box. Our strategies are like a breath of fresh air—new, exciting, and guaranteed to keep your brand on its toes.",
-      icon: <FaLightbulb className="w-6 h-6 text-indigo-500" />,
+      icon: <FaLightbulb className="w-6 h-6 text-blue-500" />, // Changed color to blue
     },
     {
       title: "Custom Fit Just for You",
       description:
         "Your brand is unique, and so are our solutions. We don't do generic; we craft strategies that are as one-of-a-kind as you are.",
-      icon: <FaPuzzlePiece className="w-6 h-6 text-indigo-500" />,
+      icon: <FaPuzzlePiece className="w-6 h-6 text-blue-500" />, // Changed color to blue
     },
     {
       title: "Always Here for You",
       description:
         "We're not just a service; we're your go-to sidekicks. Whether you need a hand or a high-five, we're here for you, ready to support you every step of the way.",
-      icon: <FaHeadset className="w-6 h-6 text-indigo-500" />,
+      icon: <FaHeadset className="w-6 h-6 text-blue-500" />, // Changed color to blue
     },
     {
       title: "Impact That Rocks",
       description:
         "We focus on making a real difference. Our goal is to deliver results that not only impress but actually move your business forward in a big way.",
-      icon: <FaRocket className="w-6 h-6 text-indigo-500" />,
+      icon: <FaRocket className="w-6 h-6 text-blue-500" />, // Changed color to blue
     },
   ];
 
@@ -67,14 +67,14 @@ export function FeaturesSectionDemo() {
       {/* Centered Button */}
       <div className="flex justify-center mb-10">
         <a href="/price">
-          <button className="bg-[#5f67dac7] text-white px-6 py-3 rounded-full font-bold hover:bg-[#191c46c7] transition duration-300">
+        <button className="bg-[#1E90FF] text-white px-6 py-3 rounded-full font-bold hover:bg-[#104E8B] transition duration-300">
             Check Our Pricing
           </button>
         </a>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
+        <br />
+        <br />
+        <br />
+        <br />
       </div>
 
       {/* Features Grid */}
@@ -91,7 +91,7 @@ const Feature = ({ title, description, icon, index }) => {
   return (
     <div
       className={cn(
-        "flex flex-col lg:border-r border-gray-500  py-10 relative group/feature ",
+        "flex flex-col lg:border-r border-gray-500 py-10 relative group/feature ",
         (index === 0 || index === 4) && "lg:border-l border-gray-500",
         index < 4 && "lg:border-b border-gray-500 "
       )}
@@ -106,7 +106,7 @@ const Feature = ({ title, description, icon, index }) => {
         {icon}
       </div>
       <div className="text-lg font-bold mb-2 relative z-10 px-10">
-        <div className="absolute left-0 inset-y-0 h-6 group-hover/feature:h-8 w-1 rounded-tr-full rounded-br-full bg-neutral-300  group-hover/feature:bg-blue-500 transition-all duration-200 origin-center" />
+        <div className="absolute left-0 inset-y-0 h-6 group-hover/feature:h-8 w-1 rounded-tr-full rounded-br-full bg-neutral-300 group-hover/feature:bg-blue-500 transition-all duration-200 origin-center" />
         <span className="group-hover/feature:translate-x-2 transition duration-200 inline-block text-neutral-200">
           {title}
         </span>
