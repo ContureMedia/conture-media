@@ -24,16 +24,7 @@ export default function Home() {
           background: "radial-gradient(circle, #111 75%, black 100%)",
         }}
       >
-       
         <div className="w-full flex items-center justify-center flex-col ">
-        <a
-              href="mailto:Business@conturemedia.com?subject=I'm%20interested%20in%20your%20services&body=Hello,%20I%20am%20interested%20in%20your%20services.%20Please%20contact%20me%20back."
-              target="_self"  // Optionally, try target="_self" instead of "_blank"
-            >
-              <button className="my-7 bg-blue-500 text-white px-6 py-3 rounded-full text-5 font-semibold shadow-lg transform transition-transform duration-300 hover:scale-105 hover:bg-blue-800">
-                GET STARTED
-              </button>
-            </a>
           <h1 className=" text-center w-full capitalize flex-wrap text-4xl p-2  font-bold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500  bg-clip-text text-transparent">
             What sets us apart?
           </h1>

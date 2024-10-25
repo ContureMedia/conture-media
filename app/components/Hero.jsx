@@ -131,8 +131,20 @@ const Hero = () => {
         <InfiniteImageCarousel images={logos} />
       </div>
 
-      <div className="mt-10 mb-2">
+      <div className="my-10">
         <Democracy />
+      </div>
+
+      {/* CTA Button */}
+      <div className="my-5 z-10">
+        <a href="mailto:business@conturemedia.com?subject=Request%20for%20Meeting&body=Hello%20Conture%20Media%20Team,%0D%0A%0D%0AI%20would%20like%20to%20request%20a%20meeting%20to%20discuss%20our%20potential%20collaboration.%0D%0A%0D%0AThank%20you!%0D%0A%0D%0ABest%20regards,%0D%0A[Your%20Name]">
+          <button className="p-[3px] relative my-8 md:my-4">
+            <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg" />
+            <div className="px-8 py-2 text-xl md:text-3xl uppercase font-bold bg-black rounded-[6px] relative group transition duration-200 text-white hover:bg-transparent">
+              Request
+            </div>
+          </button>
+        </a>
       </div>
 
       <BackgroundBeams />
