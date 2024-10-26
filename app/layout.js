@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import SocialLinks from "./components/SocialLinks";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -92,6 +93,7 @@ export default function RootLayout({ children }) {
         <Navbar />
         <SocialLinks />
         {children}
+        <GoogleAnalytics gaId="G-71H9TDFX6W" />
         <Footer />
       </body>
     </html>
