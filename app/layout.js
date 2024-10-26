@@ -3,7 +3,7 @@ import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import SocialLinks from "./components/SocialLinks";
-import { GoogleAnalytics } from "@next/third-parties/google";
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -89,11 +89,23 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-X0EVT5J1PV"
+        ></Script>
+        <Script id="google-analytics">
+          {`window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-X0EVT5J1PV');`}
+        </Script>
+      </head>
       <body className={`${inter.className} bg-black text-white`}>
         <Navbar />
         <SocialLinks />
         {children}
-        <GoogleAnalytics gaId="G-71H9TDFX6W" />
         <Footer />
       </body>
     </html>
