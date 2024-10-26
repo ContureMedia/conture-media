@@ -7,7 +7,8 @@ import SocialLinks from "./components/SocialLinks";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Conture Media - The Future of Content Marketing: Community and Connection",
+  title:
+    "Conture Media - The Future of Content Marketing: Community and Connection",
   description:
     "As the digital landscape evolves, the future of content marketing lies in building communities and fostering connections. Discover trends and insights into how brands are creating value through interactive and authentic content that encourages participation, engagement, and long-term loyalty.",
   keywords: [
@@ -23,7 +24,7 @@ export const metadata = {
     "Community engagement",
     "Content marketing trends",
     "building connections",
-    "interactive content"
+    "interactive content",
   ],
   openGraph: {
     title:
@@ -87,7 +88,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${inter.className} bg-black text-white`}>
         <Navbar />
         <SocialLinks />
         {children}
@@ -96,4 +97,3 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
-
