@@ -122,8 +122,9 @@ const Hero = () => {
       </div>
 
       {/* Clients Section */}
-      <h1 className="text-white mx-auto my-4 mt-10 text-2xl font-bold italic lg:text-lg">
-        Our clients:
+      <h1 className="text-indigo-500 mx-auto my-4 mt-10 text-xl md:text-2xl font-bold italic text-center">
+        Companies succeeding with content, performance marketing, and
+        community-driven cult followings:
       </h1>
 
       {/* Infinite Image Carousel */}
