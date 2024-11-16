@@ -34,6 +34,10 @@ const nextConfig = {
         protocol: "https",
         hostname: "www.rollingstone.com",
       },
+      {
+        protocol: "https",
+        hostname:"drive.usercontent.google.com"
+      }
     ],
   },
 };
