@@ -1,10 +1,9 @@
 "use client";
 
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useEffect, useState,memo } from "react";
 import { BackgroundBeams } from "@/components/ui/background-beams";
 import { motion } from "framer-motion";
 import Democracy from "./Tagline";
-
 const logos = [
   "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/512px-Telegram_logo.svg.png?20220101141644",
   "https://cdn.iconscout.com/icon/free/png-512/free-tik-tok-logo-icon-download-in-svg-png-gif-file-formats--technology-brand-social-media-company-logos-pack-icons-6297327.png?f=webp&w=256",
@@ -153,4 +152,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default memo(Hero);
