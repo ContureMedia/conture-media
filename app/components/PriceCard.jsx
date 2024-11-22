@@ -172,43 +172,7 @@ const PriceCard = () => {
             </a>
           </div>
 
-          <div className="hover:scale-105 transition-all duration-300 text-white rounded-lg shadow-lg border-2 border-sky-800 flex flex-col gap-5 p-5">
-            <h2 className="text-xl font-semibold text-center">
-            Video Editing - Short and Long Form
-            </h2>
-            <p className="text-center text-sm mb-4">
-            Create Compelling Visual Stories
-            </p>
-            <p className="flex items-center justify-start text-sm gap-2">
-              <IoMdArrowDropright fontSize={19} className="text-green-500" />
-              Professional short-form video editing
-            </p>
-            <p className="flex items-center justify-start text-sm gap-2">
-              <IoMdArrowDropright fontSize={19} className="text-green-500" />
-              High-quality long-form video production
-            </p>
-            <p className="flex items-center justify-start text-sm gap-2">
-              <IoMdArrowDropright fontSize={19} className="text-green-500" />
-              Motion graphics and animation integration
-            </p>
-            <p className="flex items-center justify-start text-sm gap-2">
-              <IoMdArrowDropright fontSize={19} className="text-green-500" />
-              Reels, TikTok, and YouTube content creation
-            </p>
-            <p className="flex items-center justify-start text-sm gap-2">
-              <IoMdArrowDropright fontSize={19} className="text-green-500" />
-              Video optimization for platforms
-            </p>
-            <p className="flex items-center justify-start text-sm gap-2">
-              <IoMdArrowDropright fontSize={19} className="text-green-500" />
-              Revision and feedback implementation
-            </p>
-            <a href="https://calendly.com/auditmeet/30min?month=2024-03">
-              <div className="flex items-center justify-center mt-auto">
-                <SecondButton text="Get A Quote" />
-              </div>
-            </a>
-          </div>
+          
 
           <div className="hover:scale-105 transition-all duration-300 text-white rounded-lg shadow-lg border-2 border-sky-800 flex flex-col gap-5 p-5">
             <h2 className="text-xl font-semibold text-center">
@@ -240,6 +204,43 @@ const PriceCard = () => {
               Competitor analysis and differentiation
             </p>
             
+            <a href="https://calendly.com/auditmeet/30min?month=2024-03">
+              <div className="flex items-center justify-center mt-auto">
+                <SecondButton text="Get A Quote" />
+              </div>
+            </a>
+          </div>
+          <div className="hover:scale-105 transition-all duration-300 text-white rounded-lg shadow-lg border-2 border-sky-800 flex flex-col gap-5 p-5">
+            <h2 className="text-xl font-semibold text-center">
+            Video Editing - Short and Long Form
+            </h2>
+            <p className="text-center text-sm mb-4">
+            Create Compelling Visual Stories
+            </p>
+            <p className="flex items-center justify-start text-sm gap-2">
+              <IoMdArrowDropright fontSize={19} className="text-green-500" />
+              Professional short-form video editing
+            </p>
+            <p className="flex items-center justify-start text-sm gap-2">
+              <IoMdArrowDropright fontSize={19} className="text-green-500" />
+              High-quality long-form video production
+            </p>
+            <p className="flex items-center justify-start text-sm gap-2">
+              <IoMdArrowDropright fontSize={19} className="text-green-500" />
+              Motion graphics and animation integration
+            </p>
+            <p className="flex items-center justify-start text-sm gap-2">
+              <IoMdArrowDropright fontSize={19} className="text-green-500" />
+              Reels, TikTok, and YouTube content creation
+            </p>
+            <p className="flex items-center justify-start text-sm gap-2">
+              <IoMdArrowDropright fontSize={19} className="text-green-500" />
+              Video optimization for platforms
+            </p>
+            <p className="flex items-center justify-start text-sm gap-2">
+              <IoMdArrowDropright fontSize={19} className="text-green-500" />
+              Revision and feedback implementation
+            </p>
             <a href="https://calendly.com/auditmeet/30min?month=2024-03">
               <div className="flex items-center justify-center mt-auto">
                 <SecondButton text="Get A Quote" />
