@@ -135,6 +135,118 @@ const PriceCard = () => {
             </a>
           </div>
         </div>
+        <div className="my-8 space-y-8 lg:grid lg:grid-cols-3 sm:grid sm:grid-cols-1 md:grid-cols-2 sm:gap-6 xl:gap-10 lg:space-y-0">
+          <div className="hover:scale-105 transition-all duration-300 text-white rounded-lg shadow-lg border-2 border-sky-800 flex flex-col gap-5 p-5">
+            <h2 className="text-xl font-semibold text-center">
+            CSR Digital Marketing Campaigns
+            </h2>
+            <p className="text-center text-sm mb-4">Drive Social Impact Through Digital Strategy</p>
+            <p className="flex items-center justify-start text-sm gap-2">
+              <IoMdArrowDropright fontSize={19} className="text-green-500" />
+              Campaign strategy and planning
+            </p>
+            <p className="flex items-center justify-start text-sm gap-2">
+              <IoMdArrowDropright fontSize={19} className="text-green-500" />
+              Cause-driven content creation
+            </p>
+            <p className="flex items-center justify-start text-sm gap-2">
+              <IoMdArrowDropright fontSize={19} className="text-green-500" />
+              Paid ad management and optimization
+            </p>
+            <p className="flex items-center justify-start text-sm gap-2">
+              <IoMdArrowDropright fontSize={19} className="text-green-500" />
+              Partnership outreach and collaboration
+            </p>
+            <p className="flex items-center justify-start text-sm gap-2">
+              <IoMdArrowDropright fontSize={19} className="text-green-500" />
+              Analytics and performance reports
+            </p>
+            <p className="flex items-center justify-start text-sm gap-2">
+              <IoMdArrowDropright fontSize={19} className="text-green-500" />
+              Community engagement initiatives
+            </p>
+            <a href="https://calendly.com/auditmeet/30min?month=2024-03">
+              <div className="flex items-center justify-center mt-auto">
+                <SecondButton text="Get A Quote" />
+              </div>
+            </a>
+          </div>
+
+          <div className="hover:scale-105 transition-all duration-300 text-white rounded-lg shadow-lg border-2 border-sky-800 flex flex-col gap-5 p-5">
+            <h2 className="text-xl font-semibold text-center">
+            Video Editing - Short and Long Form
+            </h2>
+            <p className="text-center text-sm mb-4">
+            Create Compelling Visual Stories
+            </p>
+            <p className="flex items-center justify-start text-sm gap-2">
+              <IoMdArrowDropright fontSize={19} className="text-green-500" />
+              Professional short-form video editing
+            </p>
+            <p className="flex items-center justify-start text-sm gap-2">
+              <IoMdArrowDropright fontSize={19} className="text-green-500" />
+              High-quality long-form video production
+            </p>
+            <p className="flex items-center justify-start text-sm gap-2">
+              <IoMdArrowDropright fontSize={19} className="text-green-500" />
+              Motion graphics and animation integration
+            </p>
+            <p className="flex items-center justify-start text-sm gap-2">
+              <IoMdArrowDropright fontSize={19} className="text-green-500" />
+              Reels, TikTok, and YouTube content creation
+            </p>
+            <p className="flex items-center justify-start text-sm gap-2">
+              <IoMdArrowDropright fontSize={19} className="text-green-500" />
+              Video optimization for platforms
+            </p>
+            <p className="flex items-center justify-start text-sm gap-2">
+              <IoMdArrowDropright fontSize={19} className="text-green-500" />
+              Revision and feedback implementation
+            </p>
+            <a href="https://calendly.com/auditmeet/30min?month=2024-03">
+              <div className="flex items-center justify-center mt-auto">
+                <SecondButton text="Get A Quote" />
+              </div>
+            </a>
+          </div>
+
+          <div className="hover:scale-105 transition-all duration-300 text-white rounded-lg shadow-lg border-2 border-sky-800 flex flex-col gap-5 p-5">
+            <h2 className="text-xl font-semibold text-center">
+            Branding and Marketing Consultation
+            </h2>
+            <p className="text-center text-sm mb-4">Craft a Powerful Brand Presence</p>
+            <p className="flex items-center justify-start text-sm gap-2">
+              <IoMdArrowDropright fontSize={19} className="text-green-500" />
+              In-depth brand analysis and strategy
+            </p>
+            <p className="flex items-center justify-start text-sm gap-2">
+              <IoMdArrowDropright fontSize={19} className="text-green-500" />
+              Marketing roadmap development
+            </p>
+            <p className="flex items-center justify-start text-sm gap-2">
+              <IoMdArrowDropright fontSize={19} className="text-green-500" />
+              Audience persona creation
+            </p>
+            <p className="flex items-center justify-start text-sm gap-2">
+              <IoMdArrowDropright fontSize={19} className="text-green-500" />
+              Consistent brand messaging
+            </p>
+            <p className="flex items-center justify-start text-sm gap-2">
+              <IoMdArrowDropright fontSize={19} className="text-green-500" />
+              Campaign planning and execution guidance
+            </p>
+            <p className="flex items-center justify-start text-sm gap-2">
+              <IoMdArrowDropright fontSize={19} className="text-green-500" />
+              Competitor analysis and differentiation
+            </p>
+            
+            <a href="https://calendly.com/auditmeet/30min?month=2024-03">
+              <div className="flex items-center justify-center mt-auto">
+                <SecondButton text="Get A Quote" />
+              </div>
+            </a>
+          </div>
+        </div>
         <div className="w-full flex flex-col items-center justify-center my-5 md:p-5 mt-10 rounded mx-auto">
           <p className="text-center capitalize flex-wrap text-4xl sm:text-6xl lg:text-8xl p-2 md:p-4 font-bold from-purple-600 via-pink-600 to-blue-600 bg-gradient-to-r bg-clip-text text-transparent">
             Get your Custom Quote
@@ -153,6 +265,7 @@ const PriceCard = () => {
           support to our comprehensive solutions
         </p>
       </div>
+      
     </section>
   );
 };

@@ -138,33 +138,6 @@ const Navbar = () => {
                         </li>
                         <li>
                           <Link
-                            href="/price"
-                            onClick={() => setIsOpen(false)}
-                            className="block px-4 py-2 hover:bg-gray-100 hover:text-black dark:hover:bg-gray-600 dark:hover:text-white"
-                          >
-                            CSR Digital Marketing Campaigns
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            href="/price"
-                            onClick={() => setIsOpen(false)}
-                            className="block px-4 py-2 hover:bg-gray-100 hover:text-black dark:hover:bg-gray-600 dark:hover:text-white"
-                          >
-                            Branding & Marketing Consulations
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            href="/price"
-                            onClick={() => setIsOpen(false)}
-                            className="block px-4 py-2 hover:bg-gray-100 hover:text-black dark:hover:bg-gray-600 dark:hover:text-white"
-                          >
-                        Video Editing - Short - Long Form
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
                             href="/book"
                             onClick={() => setIsOpen(false)}
                             className="block px-4 py-2 hover:bg-gray-100 hover:text-black  dark:hover:bg-gray-600 dark:hover:text-white"

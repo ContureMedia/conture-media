@@ -113,6 +113,15 @@ const grid = [
     description:
       "We cultivate and manage thriving communities that strengthen your brand’s connection with its audience.",
   },
+  {
+    title:"CSR digital marketing campaigns"
+  },
+  {
+    title:"Branding & Marketing Consultation"
+  },
+  {
+    title:"Video Editing - Short - Long form"
+  }
 ];
 
 export const Grid = ({ pattern, size }) => {
