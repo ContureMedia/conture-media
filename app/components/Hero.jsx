@@ -1,15 +1,15 @@
 "use client";
-
+import Image from "next/image";
 import React, { useRef, useEffect, useState,memo } from "react";
 import { BackgroundBeams } from "@/components/ui/background-beams";
 import { motion } from "framer-motion";
 import Democracy from "./Tagline";
 const logos = [
-  "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/512px-Telegram_logo.svg.png?20220101141644",
+  "/Telegram_2019_Logo.svg",
   "https://cdn.iconscout.com/icon/free/png-512/free-tik-tok-logo-icon-download-in-svg-png-gif-file-formats--technology-brand-social-media-company-logos-pack-icons-6297327.png?f=webp&w=256",
   "https://cdn.iconscout.com/icon/free/png-512/free-zomato-logo-icon-download-in-svg-png-gif-file-formats--food-company-brand-delivery-brans-logos-icons-1637644.png?f=webp&w=256",
   "https://upload.wikimedia.org/wikipedia/commons/c/ce/Coca-Cola_logo.svg",
-  "https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-linkedin-512.png",
+  "/LinkedIn.png",
   "https://www.freepnglogos.com/uploads/dominos-png-logo/dominos-pizza-readies-new-logo-png-10.png",
   "https://www.freepnglogos.com/uploads/starbucks-logo-png-transparent-0.png",
   "https://www.freepnglogos.com/uploads/fedex-logo-png/fedex-emblem-delivery-business-logo-2.png",
@@ -57,11 +57,13 @@ function InfiniteImageCarousel({ images }) {
           style={{ transform: `translateX(${translateX}px)` }}
         >
           {[...images, ...images].map((src, index) => (
-            <img
+            <Image
               key={index}
               src={src}
+              width={512}
+              height={512}
               alt={`Brand logo ${index + 1}`}
-              className="h-16 sm:h-20  w-auto mx-8 sm:mx-10 md:mx-12 lg:mx-14 object-contain"
+              className="h-16 sm:h-20 w-auto mx-8 sm:mx-10 md:mx-12 lg:mx-14 object-contain"
             />
           ))}
         </div>

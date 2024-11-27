@@ -42,7 +42,7 @@ const Navbar = () => {
             href="/"
             className="flex items-center space-x-3 rtl:space-x-reverse"
           >
-            <img src="/logolight.png" alt="Logo" width={120} height={120} />
+            <Image src="/logolight.png" alt="Logo" width={120} height={120} />
           </Link>
           <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
             <div className="lg:block hidden">

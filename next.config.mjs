@@ -38,6 +38,31 @@ const nextConfig = {
         protocol: "https",
         hostname:"drive.usercontent.google.com"
       }
+      ,
+      {
+        protocol: "https",
+        hostname:"upload.wikimedia.org"
+      }
+      ,
+      {
+        protocol: "https",
+        hostname:"www.freepnglogos.com"
+      }
+      ,
+      {
+        protocol: "https",
+        hostname:"cdn1.iconfinder.com"
+      }
+      ,
+      {
+        protocol: "https",
+        hostname:"cdn.iconscout.com"
+      }
+      ,
+      {
+        protocol: "https",
+        hostname:"cdn1.iconfinder.com"
+      }
     ],
   },
 };
